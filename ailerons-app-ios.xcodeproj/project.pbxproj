@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		862982AE2B2C8FF90000C34F /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982AD2B2C8FF90000C34F /* FormView.swift */; };
 		86DF7E432B2C8A5B00F61E51 /* ailerons_app_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF7E422B2C8A5B00F61E51 /* ailerons_app_iosApp.swift */; };
 		86DF7E452B2C8A5B00F61E51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF7E442B2C8A5B00F61E51 /* ContentView.swift */; };
 		86DF7E472B2C8A5E00F61E51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86DF7E462B2C8A5E00F61E51 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		862982AD2B2C8FF90000C34F /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		86DF7E3F2B2C8A5B00F61E51 /* ailerons-app-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ailerons-app-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86DF7E422B2C8A5B00F61E51 /* ailerons_app_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ailerons_app_iosApp.swift; sourceTree = "<group>"; };
 		86DF7E442B2C8A5B00F61E51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		862982A92B2C8FBF0000C34F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				862982AC2B2C8FD30000C34F /* FormView */,
+				86DF7E442B2C8A5B00F61E51 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		862982AA2B2C8FC40000C34F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		862982AB2B2C8FCA0000C34F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		862982AC2B2C8FD30000C34F /* FormView */ = {
+			isa = PBXGroup;
+			children = (
+				862982AD2B2C8FF90000C34F /* FormView.swift */,
+			);
+			path = FormView;
+			sourceTree = "<group>";
+		};
 		86DF7E362B2C8A5B00F61E51 = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +127,10 @@
 		86DF7E412B2C8A5B00F61E51 /* ailerons-app-ios */ = {
 			isa = PBXGroup;
 			children = (
+				862982AB2B2C8FCA0000C34F /* Model */,
+				862982AA2B2C8FC40000C34F /* ViewModel */,
+				862982A92B2C8FBF0000C34F /* View */,
 				86DF7E422B2C8A5B00F61E51 /* ailerons_app_iosApp.swift */,
-				86DF7E442B2C8A5B00F61E51 /* ContentView.swift */,
 				86DF7E462B2C8A5E00F61E51 /* Assets.xcassets */,
 				86DF7E482B2C8A5E00F61E51 /* Preview Content */,
 			);
@@ -259,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				862982AE2B2C8FF90000C34F /* FormView.swift in Sources */,
 				86DF7E452B2C8A5B00F61E51 /* ContentView.swift in Sources */,
 				86DF7E432B2C8A5B00F61E51 /* ailerons_app_iosApp.swift in Sources */,
 			);
@@ -349,7 +385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -406,7 +442,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -432,7 +468,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,7 +498,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,7 +521,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MZ3E779E6C;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jeremie-ada.ailerons-app-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,7 +541,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MZ3E779E6C;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jeremie-ada.ailerons-app-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
