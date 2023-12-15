@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		86DF7E432B2C8A5B00F61E51 /* ailerons_app_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF7E422B2C8A5B00F61E51 /* ailerons_app_iosApp.swift */; };
+		86DF7E452B2C8A5B00F61E51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF7E442B2C8A5B00F61E51 /* ContentView.swift */; };
+		86DF7E472B2C8A5E00F61E51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86DF7E462B2C8A5E00F61E51 /* Assets.xcassets */; };
+		86DF7E4A2B2C8A5E00F61E51 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86DF7E492B2C8A5E00F61E51 /* Preview Assets.xcassets */; };
+		86DF7E542B2C8A5E00F61E51 /* ailerons_app_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF7E532B2C8A5E00F61E51 /* ailerons_app_iosTests.swift */; };
+		86DF7E5E2B2C8A5E00F61E51 /* ailerons_app_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF7E5D2B2C8A5E00F61E51 /* ailerons_app_iosUITests.swift */; };
+		86DF7E602B2C8A5E00F61E51 /* ailerons_app_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF7E5F2B2C8A5E00F61E51 /* ailerons_app_iosUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		86DF7E502B2C8A5E00F61E51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86DF7E372B2C8A5B00F61E51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86DF7E3E2B2C8A5B00F61E51;
+			remoteInfo = "ailerons-app-ios";
+		};
+		86DF7E5A2B2C8A5E00F61E51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86DF7E372B2C8A5B00F61E51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86DF7E3E2B2C8A5B00F61E51;
+			remoteInfo = "ailerons-app-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		86DF7E3F2B2C8A5B00F61E51 /* ailerons-app-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ailerons-app-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86DF7E422B2C8A5B00F61E51 /* ailerons_app_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ailerons_app_iosApp.swift; sourceTree = "<group>"; };
+		86DF7E442B2C8A5B00F61E51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		86DF7E462B2C8A5E00F61E51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		86DF7E492B2C8A5E00F61E51 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		86DF7E4F2B2C8A5E00F61E51 /* ailerons-app-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ailerons-app-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86DF7E532B2C8A5E00F61E51 /* ailerons_app_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ailerons_app_iosTests.swift; sourceTree = "<group>"; };
+		86DF7E592B2C8A5E00F61E51 /* ailerons-app-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ailerons-app-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86DF7E5D2B2C8A5E00F61E51 /* ailerons_app_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ailerons_app_iosUITests.swift; sourceTree = "<group>"; };
+		86DF7E5F2B2C8A5E00F61E51 /* ailerons_app_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ailerons_app_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86DF7E3C2B2C8A5B00F61E51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86DF7E4C2B2C8A5E00F61E51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86DF7E562B2C8A5E00F61E51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		86DF7E362B2C8A5B00F61E51 = {
+			isa = PBXGroup;
+			children = (
+				86DF7E412B2C8A5B00F61E51 /* ailerons-app-ios */,
+				86DF7E522B2C8A5E00F61E51 /* ailerons-app-iosTests */,
+				86DF7E5C2B2C8A5E00F61E51 /* ailerons-app-iosUITests */,
+				86DF7E402B2C8A5B00F61E51 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		86DF7E402B2C8A5B00F61E51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86DF7E3F2B2C8A5B00F61E51 /* ailerons-app-ios.app */,
+				86DF7E4F2B2C8A5E00F61E51 /* ailerons-app-iosTests.xctest */,
+				86DF7E592B2C8A5E00F61E51 /* ailerons-app-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86DF7E412B2C8A5B00F61E51 /* ailerons-app-ios */ = {
+			isa = PBXGroup;
+			children = (
+				86DF7E422B2C8A5B00F61E51 /* ailerons_app_iosApp.swift */,
+				86DF7E442B2C8A5B00F61E51 /* ContentView.swift */,
+				86DF7E462B2C8A5E00F61E51 /* Assets.xcassets */,
+				86DF7E482B2C8A5E00F61E51 /* Preview Content */,
+			);
+			path = "ailerons-app-ios";
+			sourceTree = "<group>";
+		};
+		86DF7E482B2C8A5E00F61E51 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				86DF7E492B2C8A5E00F61E51 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		86DF7E522B2C8A5E00F61E51 /* ailerons-app-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				86DF7E532B2C8A5E00F61E51 /* ailerons_app_iosTests.swift */,
+			);
+			path = "ailerons-app-iosTests";
+			sourceTree = "<group>";
+		};
+		86DF7E5C2B2C8A5E00F61E51 /* ailerons-app-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				86DF7E5D2B2C8A5E00F61E51 /* ailerons_app_iosUITests.swift */,
+				86DF7E5F2B2C8A5E00F61E51 /* ailerons_app_iosUITestsLaunchTests.swift */,
+			);
+			path = "ailerons-app-iosUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		86DF7E3E2B2C8A5B00F61E51 /* ailerons-app-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86DF7E632B2C8A5E00F61E51 /* Build configuration list for PBXNativeTarget "ailerons-app-ios" */;
+			buildPhases = (
+				86DF7E3B2B2C8A5B00F61E51 /* Sources */,
+				86DF7E3C2B2C8A5B00F61E51 /* Frameworks */,
+				86DF7E3D2B2C8A5B00F61E51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ailerons-app-ios";
+			productName = "ailerons-app-ios";
+			productReference = 86DF7E3F2B2C8A5B00F61E51 /* ailerons-app-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		86DF7E4E2B2C8A5E00F61E51 /* ailerons-app-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86DF7E662B2C8A5E00F61E51 /* Build configuration list for PBXNativeTarget "ailerons-app-iosTests" */;
+			buildPhases = (
+				86DF7E4B2B2C8A5E00F61E51 /* Sources */,
+				86DF7E4C2B2C8A5E00F61E51 /* Frameworks */,
+				86DF7E4D2B2C8A5E00F61E51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86DF7E512B2C8A5E00F61E51 /* PBXTargetDependency */,
+			);
+			name = "ailerons-app-iosTests";
+			productName = "ailerons-app-iosTests";
+			productReference = 86DF7E4F2B2C8A5E00F61E51 /* ailerons-app-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		86DF7E582B2C8A5E00F61E51 /* ailerons-app-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86DF7E692B2C8A5E00F61E51 /* Build configuration list for PBXNativeTarget "ailerons-app-iosUITests" */;
+			buildPhases = (
+				86DF7E552B2C8A5E00F61E51 /* Sources */,
+				86DF7E562B2C8A5E00F61E51 /* Frameworks */,
+				86DF7E572B2C8A5E00F61E51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86DF7E5B2B2C8A5E00F61E51 /* PBXTargetDependency */,
+			);
+			name = "ailerons-app-iosUITests";
+			productName = "ailerons-app-iosUITests";
+			productReference = 86DF7E592B2C8A5E00F61E51 /* ailerons-app-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86DF7E372B2C8A5B00F61E51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					86DF7E3E2B2C8A5B00F61E51 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					86DF7E4E2B2C8A5E00F61E51 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 86DF7E3E2B2C8A5B00F61E51;
+					};
+					86DF7E582B2C8A5E00F61E51 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 86DF7E3E2B2C8A5B00F61E51;
+					};
+				};
+			};
+			buildConfigurationList = 86DF7E3A2B2C8A5B00F61E51 /* Build configuration list for PBXProject "ailerons-app-ios" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = fr;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				fr,
+				es,
+			);
+			mainGroup = 86DF7E362B2C8A5B00F61E51;
+			productRefGroup = 86DF7E402B2C8A5B00F61E51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86DF7E3E2B2C8A5B00F61E51 /* ailerons-app-ios */,
+				86DF7E4E2B2C8A5E00F61E51 /* ailerons-app-iosTests */,
+				86DF7E582B2C8A5E00F61E51 /* ailerons-app-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86DF7E3D2B2C8A5B00F61E51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86DF7E4A2B2C8A5E00F61E51 /* Preview Assets.xcassets in Resources */,
+				86DF7E472B2C8A5E00F61E51 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86DF7E4D2B2C8A5E00F61E51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86DF7E572B2C8A5E00F61E51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86DF7E3B2B2C8A5B00F61E51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86DF7E452B2C8A5B00F61E51 /* ContentView.swift in Sources */,
+				86DF7E432B2C8A5B00F61E51 /* ailerons_app_iosApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86DF7E4B2B2C8A5E00F61E51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86DF7E542B2C8A5E00F61E51 /* ailerons_app_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86DF7E552B2C8A5E00F61E51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86DF7E5E2B2C8A5E00F61E51 /* ailerons_app_iosUITests.swift in Sources */,
+				86DF7E602B2C8A5E00F61E51 /* ailerons_app_iosUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		86DF7E512B2C8A5E00F61E51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86DF7E3E2B2C8A5B00F61E51 /* ailerons-app-ios */;
+			targetProxy = 86DF7E502B2C8A5E00F61E51 /* PBXContainerItemProxy */;
+		};
+		86DF7E5B2B2C8A5E00F61E51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86DF7E3E2B2C8A5B00F61E51 /* ailerons-app-ios */;
+			targetProxy = 86DF7E5A2B2C8A5E00F61E51 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		86DF7E612B2C8A5E00F61E51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		86DF7E622B2C8A5E00F61E51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		86DF7E642B2C8A5E00F61E51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ailerons-app-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = MZ3E779E6C;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jeremie-ada.ailerons-app-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		86DF7E652B2C8A5E00F61E51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ailerons-app-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = MZ3E779E6C;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jeremie-ada.ailerons-app-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		86DF7E672B2C8A5E00F61E51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ3E779E6C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jeremie-ada.ailerons-app-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ailerons-app-ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ailerons-app-ios";
+			};
+			name = Debug;
+		};
+		86DF7E682B2C8A5E00F61E51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ3E779E6C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jeremie-ada.ailerons-app-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ailerons-app-ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ailerons-app-ios";
+			};
+			name = Release;
+		};
+		86DF7E6A2B2C8A5E00F61E51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ3E779E6C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jeremie-ada.ailerons-app-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ailerons-app-ios";
+			};
+			name = Debug;
+		};
+		86DF7E6B2B2C8A5E00F61E51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZ3E779E6C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jeremie-ada.ailerons-app-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ailerons-app-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86DF7E3A2B2C8A5B00F61E51 /* Build configuration list for PBXProject "ailerons-app-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86DF7E612B2C8A5E00F61E51 /* Debug */,
+				86DF7E622B2C8A5E00F61E51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86DF7E632B2C8A5E00F61E51 /* Build configuration list for PBXNativeTarget "ailerons-app-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86DF7E642B2C8A5E00F61E51 /* Debug */,
+				86DF7E652B2C8A5E00F61E51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86DF7E662B2C8A5E00F61E51 /* Build configuration list for PBXNativeTarget "ailerons-app-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86DF7E672B2C8A5E00F61E51 /* Debug */,
+				86DF7E682B2C8A5E00F61E51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86DF7E692B2C8A5E00F61E51 /* Build configuration list for PBXNativeTarget "ailerons-app-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86DF7E6A2B2C8A5E00F61E51 /* Debug */,
+				86DF7E6B2B2C8A5E00F61E51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 86DF7E372B2C8A5B00F61E51 /* Project object */;
+}
