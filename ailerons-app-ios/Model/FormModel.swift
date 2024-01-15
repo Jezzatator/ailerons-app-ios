@@ -80,6 +80,16 @@ final class DateFormComponent: FormComponent {
     }
 }
 
+// Species Component
+
+final class SpeciesFormComponent: FormComponent {
+    
+    let mode: UIPickerView
+    
+    init(mode: UIPickerView) {
+        self.mode = mode
+    }
+}
 
 // Button Component
 

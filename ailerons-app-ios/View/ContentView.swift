@@ -9,16 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @EnvironmentObject var router: TabRouter
     
     var body: some View {
         VStack {
-            Image(systemName: "fish.circle")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, Ailerons!")
+            Text("Hello!")
+            Image("ailerons-logo")
+                .imageScale(.small)
             
-            ViewControllerWrapper()
-                .edgesIgnoringSafeArea(.all)
+            Button {
+                router.change(to: .reglages)
+            } label: {
+                Text("Switch to the other screen")
+            }
         }
         .padding()
     }
@@ -26,4 +29,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environmentObject(TabRouter())
 }

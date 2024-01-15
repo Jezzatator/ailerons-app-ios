@@ -9,11 +9,13 @@ import UIKit
 
 class FormButtonCollectionViewCell: UICollectionViewCell {
     
+    var deepSaffron = UIColor(red: 0.95, green: 0.62, blue: 0.21, alpha: 1.00)
+    
     private lazy var actionBtn: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitleColor(.white, for: .normal)
-        btn.backgroundColor = .systemBlue
+        btn.backgroundColor = deepSaffron
         btn.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
         return btn
     }()

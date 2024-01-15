@@ -18,6 +18,11 @@
 		862982C42B2CABC60000C34F /* FormCompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982C32B2CABC60000C34F /* FormCompositionalLayout.swift */; };
 		862982C62B2CB02A0000C34F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982C52B2CB02A0000C34F /* ViewController.swift */; };
 		862982C82B2CB7530000C34F /* ViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982C72B2CB7530000C34F /* ViewControllerWrapper.swift */; };
+		86C0811F2B5171D600908121 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C0811E2B5171D600908121 /* MapViewController.swift */; };
+		86C081222B5172A400908121 /* MapViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C081212B5172A400908121 /* MapViewControllerWrapper.swift */; };
+		86C081242B51794500908121 /* MovebankFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C081232B51794500908121 /* MovebankFetch.swift */; };
+		86C081262B517A2B00908121 /* Individuals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C081252B517A2B00908121 /* Individuals.swift */; };
+		86C081282B517A5800908121 /* IndividualsFormatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C081272B517A5800908121 /* IndividualsFormatted.swift */; };
 		86DF7E432B2C8A5B00F61E51 /* ailerons_app_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF7E422B2C8A5B00F61E51 /* ailerons_app_iosApp.swift */; };
 		86DF7E452B2C8A5B00F61E51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF7E442B2C8A5B00F61E51 /* ContentView.swift */; };
 		86DF7E472B2C8A5E00F61E51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86DF7E462B2C8A5E00F61E51 /* Assets.xcassets */; };
@@ -56,6 +61,11 @@
 		862982C32B2CABC60000C34F /* FormCompositionalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCompositionalLayout.swift; sourceTree = "<group>"; };
 		862982C52B2CB02A0000C34F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		862982C72B2CB7530000C34F /* ViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWrapper.swift; sourceTree = "<group>"; };
+		86C0811E2B5171D600908121 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		86C081212B5172A400908121 /* MapViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerWrapper.swift; sourceTree = "<group>"; };
+		86C081232B51794500908121 /* MovebankFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovebankFetch.swift; sourceTree = "<group>"; };
+		86C081252B517A2B00908121 /* Individuals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Individuals.swift; sourceTree = "<group>"; };
+		86C081272B517A5800908121 /* IndividualsFormatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualsFormatted.swift; sourceTree = "<group>"; };
 		86DF7E3F2B2C8A5B00F61E51 /* ailerons-app-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ailerons-app-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86DF7E422B2C8A5B00F61E51 /* ailerons_app_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ailerons_app_iosApp.swift; sourceTree = "<group>"; };
 		86DF7E442B2C8A5B00F61E51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +106,7 @@
 		862982A92B2C8FBF0000C34F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				862982C22B2CABA80000C34F /* Layout */,
 				862982AC2B2C8FD30000C34F /* FormView */,
 				86DF7E442B2C8A5B00F61E51 /* ContentView.swift */,
 			);
@@ -105,6 +116,9 @@
 		862982AA2B2C8FC40000C34F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				86C081202B51727300908121 /* Form */,
+				86C0811D2B5171B800908121 /* Map */,
+				862982C92B304BFE0000C34F /* FormVM */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -113,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				862982B12B2CA0AB0000C34F /* FormModel.swift */,
+				86C081252B517A2B00908121 /* Individuals.swift */,
+				86C081272B517A5800908121 /* IndividualsFormatted.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,6 +136,7 @@
 		862982AC2B2C8FD30000C34F /* FormView */ = {
 			isa = PBXGroup;
 			children = (
+				862982B32B2CA45B0000C34F /* Form Content */,
 				862982AD2B2C8FF90000C34F /* FormView.swift */,
 			);
 			path = FormView;
@@ -136,6 +153,7 @@
 		862982B02B2C9BFA0000C34F /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				86C081232B51794500908121 /* MovebankFetch.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -175,6 +193,32 @@
 			path = Layout;
 			sourceTree = "<group>";
 		};
+		862982C92B304BFE0000C34F /* FormVM */ = {
+			isa = PBXGroup;
+			children = (
+				862982BB2B2CA6DB0000C34F /* CollectionViewCells */,
+			);
+			path = FormVM;
+			sourceTree = "<group>";
+		};
+		86C0811D2B5171B800908121 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				86C0811E2B5171D600908121 /* MapViewController.swift */,
+				86C081212B5172A400908121 /* MapViewControllerWrapper.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		86C081202B51727300908121 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				862982C52B2CB02A0000C34F /* ViewController.swift */,
+				862982C72B2CB7530000C34F /* ViewControllerWrapper.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
 		86DF7E362B2C8A5B00F61E51 = {
 			isa = PBXGroup;
 			children = (
@@ -198,10 +242,7 @@
 		86DF7E412B2C8A5B00F61E51 /* ailerons-app-ios */ = {
 			isa = PBXGroup;
 			children = (
-				862982C22B2CABA80000C34F /* Layout */,
-				862982BB2B2CA6DB0000C34F /* CollectionViewCells */,
 				862982B62B2CA5A10000C34F /* Extensions */,
-				862982B32B2CA45B0000C34F /* Form Content */,
 				862982AF2B2C9BF40000C34F /* Utilities */,
 				862982AB2B2C8FCA0000C34F /* Model */,
 				862982AA2B2C8FC40000C34F /* ViewModel */,
@@ -209,8 +250,6 @@
 				86DF7E422B2C8A5B00F61E51 /* ailerons_app_iosApp.swift */,
 				86DF7E462B2C8A5E00F61E51 /* Assets.xcassets */,
 				86DF7E482B2C8A5E00F61E51 /* Preview Content */,
-				862982C52B2CB02A0000C34F /* ViewController.swift */,
-				862982C72B2CB7530000C34F /* ViewControllerWrapper.swift */,
 			);
 			path = "ailerons-app-ios";
 			sourceTree = "<group>";
@@ -375,16 +414,21 @@
 				862982B52B2CA46D0000C34F /* FormContentBuilderImpl.swift in Sources */,
 				862982C42B2CABC60000C34F /* FormCompositionalLayout.swift in Sources */,
 				862982AE2B2C8FF90000C34F /* FormView.swift in Sources */,
+				86C081262B517A2B00908121 /* Individuals.swift in Sources */,
 				862982BA2B2CA6200000C34F /* UICollectionViewCell+CleanUp.swift in Sources */,
 				862982C82B2CB7530000C34F /* ViewControllerWrapper.swift in Sources */,
 				86DF7E452B2C8A5B00F61E51 /* ContentView.swift in Sources */,
 				862982C12B2CAAEC0000C34F /* FormDateCollectionViewCell.swift in Sources */,
 				862982C62B2CB02A0000C34F /* ViewController.swift in Sources */,
+				86C081282B517A5800908121 /* IndividualsFormatted.swift in Sources */,
 				862982BD2B2CA70D0000C34F /* FormButtonCollectionViewCell.swift in Sources */,
 				862982B82B2CA5BB0000C34F /* UICollectionView+Identifier.swift in Sources */,
 				86DF7E432B2C8A5B00F61E51 /* ailerons_app_iosApp.swift in Sources */,
+				86C081242B51794500908121 /* MovebankFetch.swift in Sources */,
 				862982BF2B2CA9420000C34F /* FormTextCollectionViewCell.swift in Sources */,
+				86C081222B5172A400908121 /* MapViewControllerWrapper.swift in Sources */,
 				862982B22B2CA0AB0000C34F /* FormModel.swift in Sources */,
+				86C0811F2B5171D600908121 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
