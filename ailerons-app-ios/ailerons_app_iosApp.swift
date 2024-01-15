@@ -30,8 +30,7 @@ struct ailerons_app_iosApp: App {
             TabView(selection: $router.screen) {
                 
                 // Vue Carte
-                MapViewControllerWrapper()
-                    .edgesIgnoringSafeArea(.top)
+                MapViewWrapper()
                     .badge(10)
                     .tag(Screen.map)
                     .environmentObject(router)

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// A faire rendre les bouton bien carré
 struct MapBtn: View {
     
     //var function?: Any
@@ -18,6 +19,7 @@ struct MapBtn: View {
         } label: {
             Image(systemName: systemIcon)
                 .padding(10)
+                .frame(maxWidth: 50)
                 .background(
                     .regularMaterial,
                     in: RoundedRectangle(cornerRadius: 8, style: .continuous)
