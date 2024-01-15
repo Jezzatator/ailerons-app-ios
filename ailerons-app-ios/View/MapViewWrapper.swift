@@ -13,6 +13,7 @@ struct MapViewWrapper: View {
         ZStack{
             MapViewControllerWrapper()
                 .edgesIgnoringSafeArea(.top)
+                .edgesIgnoringSafeArea(.bottom)
             HStack() {
                 Spacer()
                 VStack{

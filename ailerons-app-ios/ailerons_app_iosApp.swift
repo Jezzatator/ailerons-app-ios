@@ -34,14 +34,25 @@ struct ailerons_app_iosApp: App {
                     .badge(10)
                     .tag(Screen.map)
                     .environmentObject(router)
-                    .tabItem { Label("Carte", systemImage: "map") }
+                    .tabItem { Label("Carte", systemImage: "map")}
+
+
                 
                 // Vue Reglages
                 ViewControllerWrapper()
                     .edgesIgnoringSafeArea(.top)
                     .tag(Screen.reglages)
                     .environmentObject(router)
-                    .tabItem { Label("Réglages", systemImage: "gear") }
+                    .tabItem { Label("Réglages", systemImage: "gear")}
+
+
+            }
+            .onAppear() {
+                let appearance = UITabBarAppearance()
+                appearance.backgroundEffect = UIBlurEffect(style: .systemMaterial)
+                
+                UITabBar.appearance().standardAppearance = appearance
+                UITabBar.appearance().scrollEdgeAppearance = appearance
             }
         }
     }
