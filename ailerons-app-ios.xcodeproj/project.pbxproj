@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		861639F42B554175007FCFFC /* MapViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861639F32B554175007FCFFC /* MapViewWrapper.swift */; };
+		861639F72B55454C007FCFFC /* MapBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861639F62B55454C007FCFFC /* MapBtn.swift */; };
 		862982AE2B2C8FF90000C34F /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982AD2B2C8FF90000C34F /* FormView.swift */; };
 		862982B22B2CA0AB0000C34F /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982B12B2CA0AB0000C34F /* FormModel.swift */; };
 		862982B52B2CA46D0000C34F /* FormContentBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982B42B2CA46D0000C34F /* FormContentBuilderImpl.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		861639F32B554175007FCFFC /* MapViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewWrapper.swift; sourceTree = "<group>"; };
+		861639F62B55454C007FCFFC /* MapBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBtn.swift; sourceTree = "<group>"; };
 		862982AD2B2C8FF90000C34F /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		862982B12B2CA0AB0000C34F /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
 		862982B42B2CA46D0000C34F /* FormContentBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormContentBuilderImpl.swift; sourceTree = "<group>"; };
@@ -103,12 +107,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		861639F52B55453B007FCFFC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				861639F62B55454C007FCFFC /* MapBtn.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		862982A92B2C8FBF0000C34F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				861639F52B55453B007FCFFC /* Components */,
 				862982C22B2CABA80000C34F /* Layout */,
 				862982AC2B2C8FD30000C34F /* FormView */,
 				86DF7E442B2C8A5B00F61E51 /* ContentView.swift */,
+				861639F32B554175007FCFFC /* MapViewWrapper.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -421,12 +435,14 @@
 				862982C12B2CAAEC0000C34F /* FormDateCollectionViewCell.swift in Sources */,
 				862982C62B2CB02A0000C34F /* ViewController.swift in Sources */,
 				86C081282B517A5800908121 /* IndividualsFormatted.swift in Sources */,
+				861639F42B554175007FCFFC /* MapViewWrapper.swift in Sources */,
 				862982BD2B2CA70D0000C34F /* FormButtonCollectionViewCell.swift in Sources */,
 				862982B82B2CA5BB0000C34F /* UICollectionView+Identifier.swift in Sources */,
 				86DF7E432B2C8A5B00F61E51 /* ailerons_app_iosApp.swift in Sources */,
 				86C081242B51794500908121 /* MovebankFetch.swift in Sources */,
 				862982BF2B2CA9420000C34F /* FormTextCollectionViewCell.swift in Sources */,
 				86C081222B5172A400908121 /* MapViewControllerWrapper.swift in Sources */,
+				861639F72B55454C007FCFFC /* MapBtn.swift in Sources */,
 				862982B22B2CA0AB0000C34F /* FormModel.swift in Sources */,
 				86C0811F2B5171D600908121 /* MapViewController.swift in Sources */,
 			);
