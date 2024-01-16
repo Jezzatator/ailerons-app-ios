@@ -102,7 +102,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                         blue: (CGFloat(arc4random()) / CGFloat(UInt32.max)),
                         alpha: 1.0)], locations: [])
             renderer.lineCap = .butt
-            renderer.lineWidth = 1.0
+            renderer.lineWidth = 2.0
             return renderer
         }
         return MKOverlayRenderer()
@@ -117,33 +117,34 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     func makeMarker(data: [Individual]) {
         print("Data : \(data.count)")
         
-        
-        DispatchQueue.global().async {
-            
-            // Réinitialisez les overlays pour éviter les doublons
-                    self.diplayedOverlays.removeAll()
-            
-            // Boucle for each
-            for individual in data {
+        if data.count == 10 {
+            DispatchQueue.global().async { [weak self] in
                 
-                // utilisation de map pour créer un tableau locationFormatted
-                let locationFormatted = individual.locations.map { Location in
-                    return LocationFormatted(timestamp: Location.timestamp,
-                                             coordinate: 
-                                                CLLocationCoordinate2D(
-                                                latitude: Location.locationLat,
-                                                longitude: Location.locationLong),
-                                             title:  individual.individualTaxonCanonicalName,
-                                             subtitle: String(Location.timestamp)
-                    )
-                }
+                // Réinitialisez les overlays pour éviter les doublons
+                self?.diplayedOverlays.removeAll()
                 
-                self.drawRoute(routeData: locationFormatted)
-
-                DispatchQueue.main.async {
-                    self.mapView.addOverlays(self.diplayedOverlays)
-                    self.mapView.addAnnotations(locationFormatted)
+                // Boucle for each
+                for  individual in data {
                     
+                    // utilisation de map pour créer un tableau locationFormatted
+                    let locationFormatted = individual.locations.map { Location in
+                        return LocationFormatted(timestamp: Location.timestamp,
+                                                 coordinate:
+                                                    CLLocationCoordinate2D(
+                                                        latitude: Location.locationLat,
+                                                        longitude: Location.locationLong),
+                                                 title:  individual.individualTaxonCanonicalName,
+                                                 subtitle: String(Location.timestamp)
+                        )
+                    }
+                    
+                    self?.drawRoute(routeData: locationFormatted)
+                    
+                    DispatchQueue.main.async {
+                        self?.mapView.addOverlays(self?.diplayedOverlays ?? [])
+                        self?.mapView.addAnnotations(locationFormatted)
+                        
+                    }
                 }
             }
         }
@@ -151,27 +152,30 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 
     
     func drawRoute(routeData: [LocationFormatted]) {
-        if routeData.isEmpty {
-            print("routeData is empty, no coordinates to draw")
-            return
-        }
-
-        let coordinates = routeData.map { location -> CLLocationCoordinate2D in
-            return location.coordinate
-        }
-
-        let newRouteOverlay = MKPolygon(coordinates: coordinates, count: coordinates.count)
-        self.diplayedOverlays.append(newRouteOverlay)
-
-        DispatchQueue.main.async {
             
-            let customEdgePadding: UIEdgeInsets = UIEdgeInsets(
-                top: 50,
-                left: 50,
-                bottom: 50,
-                right: 50
-            )
-            self.mapView.setVisibleMapRect(newRouteOverlay.boundingMapRect, edgePadding: customEdgePadding, animated: true)
+            
+            if routeData.isEmpty {
+                print("routeData is empty, no coordinates to draw")
+                return
+            }
+            
+            let coordinates = routeData.map { location -> CLLocationCoordinate2D in
+                return location.coordinate
+            }
+            
+            let newRouteOverlay = MKPolygon(coordinates: coordinates, count: coordinates.count)
+            self.diplayedOverlays.append(newRouteOverlay)
+            
+            DispatchQueue.main.async { [weak self] in
+                
+                let customEdgePadding: UIEdgeInsets = UIEdgeInsets(
+                    top: 50,
+                    left: 50,
+                    bottom: 50,
+                    right: 50
+                )
+                
+                    self?.mapView.setVisibleMapRect(newRouteOverlay.boundingMapRect, edgePadding: customEdgePadding, animated: true)
         }
     }
 }
