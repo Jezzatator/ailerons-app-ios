@@ -45,8 +45,7 @@ struct ailerons_app_iosApp: App {
                     .tabItem { Label("Carte", systemImage: "map")}
 
                 // Vue liste animaux
-                ViewControllerWrapper()
-                    .edgesIgnoringSafeArea(.top)
+                SpeciesView()
                     .tag(Screen.individuals)
                     .environmentObject(router)
                     .tabItem { Label("Espèces", systemImage: "book.pages")}
@@ -65,6 +64,7 @@ struct ailerons_app_iosApp: App {
                 
                 UITabBar.appearance().standardAppearance = appearance
                 UITabBar.appearance().scrollEdgeAppearance = appearance
+                
             }
         }
     }
