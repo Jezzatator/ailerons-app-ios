@@ -31,11 +31,3 @@ class SupabaseAPI: ObservableObject {
     }
     
 }
-
-struct SupaIndiv: Decodable, Hashable {
-    var id: Int
-    var individual_name: String
-    var common_name: String
-    var binomial_name: String
-    var age: Int
-}
