@@ -7,6 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		861639F42B554175007FCFFC /* MapViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861639F32B554175007FCFFC /* MapViewWrapper.swift */; };
+		861639F72B55454C007FCFFC /* MapBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861639F62B55454C007FCFFC /* MapBtn.swift */; };
+		861639F92B567EE7007FCFFC /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861639F82B567EE7007FCFFC /* PreferencesView.swift */; };
+		861639FB2B568CAF007FCFFC /* SupabaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861639FA2B568CAF007FCFFC /* SupabaseAPI.swift */; };
+		862982AE2B2C8FF90000C34F /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982AD2B2C8FF90000C34F /* FormView.swift */; };
+		862982B22B2CA0AB0000C34F /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982B12B2CA0AB0000C34F /* FormModel.swift */; };
+		862982B52B2CA46D0000C34F /* FormContentBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982B42B2CA46D0000C34F /* FormContentBuilderImpl.swift */; };
+		862982B82B2CA5BB0000C34F /* UICollectionView+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982B72B2CA5BB0000C34F /* UICollectionView+Identifier.swift */; };
+		862982BA2B2CA6200000C34F /* UICollectionViewCell+CleanUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982B92B2CA6200000C34F /* UICollectionViewCell+CleanUp.swift */; };
+		862982BD2B2CA70D0000C34F /* FormButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982BC2B2CA70D0000C34F /* FormButtonCollectionViewCell.swift */; };
+		862982BF2B2CA9420000C34F /* FormTextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982BE2B2CA9420000C34F /* FormTextCollectionViewCell.swift */; };
+		862982C12B2CAAEC0000C34F /* FormDateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982C02B2CAAEC0000C34F /* FormDateCollectionViewCell.swift */; };
+		862982C42B2CABC60000C34F /* FormCompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982C32B2CABC60000C34F /* FormCompositionalLayout.swift */; };
+		862982C62B2CB02A0000C34F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982C52B2CB02A0000C34F /* ViewController.swift */; };
+		862982C82B2CB7530000C34F /* ViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982C72B2CB7530000C34F /* ViewControllerWrapper.swift */; };
+		862F4E4C2B569749004980DF /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 862F4E4B2B569749004980DF /* Auth */; };
+		862F4E4E2B569749004980DF /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 862F4E4D2B569749004980DF /* Functions */; };
+		862F4E502B569749004980DF /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 862F4E4F2B569749004980DF /* PostgREST */; };
+		862F4E522B569749004980DF /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 862F4E512B569749004980DF /* Realtime */; };
+		862F4E542B569749004980DF /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 862F4E532B569749004980DF /* Storage */; };
+		862F4E572B5697C8004980DF /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 862F4E562B5697C8004980DF /* Supabase */; };
+		862F4E592B569B1D004980DF /* SpeciesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862F4E582B569B1D004980DF /* SpeciesView.swift */; };
+		86A9F61C2B56B47200CE5E35 /* SpicieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A9F61B2B56B47200CE5E35 /* SpicieRow.swift */; };
+		86A9F61E2B56BE8300CE5E35 /* IndividualsSupa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A9F61D2B56BE8300CE5E35 /* IndividualsSupa.swift */; };
+		86A9F6212B56C77100CE5E35 /* SpecieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A9F6202B56C77100CE5E35 /* SpecieDetailView.swift */; };
+		86C0811F2B5171D600908121 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C0811E2B5171D600908121 /* MapViewController.swift */; };
+		86C081222B5172A400908121 /* MapViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C081212B5172A400908121 /* MapViewControllerWrapper.swift */; };
+		86C081242B51794500908121 /* MovebankFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C081232B51794500908121 /* MovebankFetch.swift */; };
+		86C081262B517A2B00908121 /* Individuals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C081252B517A2B00908121 /* Individuals.swift */; };
+		86C081282B517A5800908121 /* IndividualsFormatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C081272B517A5800908121 /* IndividualsFormatted.swift */; };
 		86DF7E432B2C8A5B00F61E51 /* ailerons_app_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF7E422B2C8A5B00F61E51 /* ailerons_app_iosApp.swift */; };
 		86DF7E452B2C8A5B00F61E51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF7E442B2C8A5B00F61E51 /* ContentView.swift */; };
 		86DF7E472B2C8A5E00F61E51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86DF7E462B2C8A5E00F61E51 /* Assets.xcassets */; };
@@ -34,6 +64,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		861639F32B554175007FCFFC /* MapViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewWrapper.swift; sourceTree = "<group>"; };
+		861639F62B55454C007FCFFC /* MapBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBtn.swift; sourceTree = "<group>"; };
+		861639F82B567EE7007FCFFC /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		861639FA2B568CAF007FCFFC /* SupabaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseAPI.swift; sourceTree = "<group>"; };
+		862982AD2B2C8FF90000C34F /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		862982B12B2CA0AB0000C34F /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
+		862982B42B2CA46D0000C34F /* FormContentBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormContentBuilderImpl.swift; sourceTree = "<group>"; };
+		862982B72B2CA5BB0000C34F /* UICollectionView+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Identifier.swift"; sourceTree = "<group>"; };
+		862982B92B2CA6200000C34F /* UICollectionViewCell+CleanUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+CleanUp.swift"; sourceTree = "<group>"; };
+		862982BC2B2CA70D0000C34F /* FormButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormButtonCollectionViewCell.swift; sourceTree = "<group>"; };
+		862982BE2B2CA9420000C34F /* FormTextCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextCollectionViewCell.swift; sourceTree = "<group>"; };
+		862982C02B2CAAEC0000C34F /* FormDateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDateCollectionViewCell.swift; sourceTree = "<group>"; };
+		862982C32B2CABC60000C34F /* FormCompositionalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCompositionalLayout.swift; sourceTree = "<group>"; };
+		862982C52B2CB02A0000C34F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		862982C72B2CB7530000C34F /* ViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWrapper.swift; sourceTree = "<group>"; };
+		862F4E582B569B1D004980DF /* SpeciesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesView.swift; sourceTree = "<group>"; };
+		86A9F61B2B56B47200CE5E35 /* SpicieRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpicieRow.swift; sourceTree = "<group>"; };
+		86A9F61D2B56BE8300CE5E35 /* IndividualsSupa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualsSupa.swift; sourceTree = "<group>"; };
+		86A9F6202B56C77100CE5E35 /* SpecieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecieDetailView.swift; sourceTree = "<group>"; };
+		86C0811E2B5171D600908121 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		86C081212B5172A400908121 /* MapViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerWrapper.swift; sourceTree = "<group>"; };
+		86C081232B51794500908121 /* MovebankFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovebankFetch.swift; sourceTree = "<group>"; };
+		86C081252B517A2B00908121 /* Individuals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Individuals.swift; sourceTree = "<group>"; };
+		86C081272B517A5800908121 /* IndividualsFormatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualsFormatted.swift; sourceTree = "<group>"; };
 		86DF7E3F2B2C8A5B00F61E51 /* ailerons-app-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ailerons-app-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86DF7E422B2C8A5B00F61E51 /* ailerons_app_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ailerons_app_iosApp.swift; sourceTree = "<group>"; };
 		86DF7E442B2C8A5B00F61E51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +105,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				862F4E502B569749004980DF /* PostgREST in Frameworks */,
+				862F4E4E2B569749004980DF /* Functions in Frameworks */,
+				862F4E572B5697C8004980DF /* Supabase in Frameworks */,
+				862F4E4C2B569749004980DF /* Auth in Frameworks */,
+				862F4E542B569749004980DF /* Storage in Frameworks */,
+				862F4E522B569749004980DF /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +131,153 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		861639F52B55453B007FCFFC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				861639F62B55454C007FCFFC /* MapBtn.swift */,
+				86A9F61B2B56B47200CE5E35 /* SpicieRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		862982A92B2C8FBF0000C34F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				86A9F61F2B56C75500CE5E35 /* Species */,
+				861639F52B55453B007FCFFC /* Components */,
+				862982C22B2CABA80000C34F /* Layout */,
+				862982AC2B2C8FD30000C34F /* FormView */,
+				86DF7E442B2C8A5B00F61E51 /* ContentView.swift */,
+				861639F32B554175007FCFFC /* MapViewWrapper.swift */,
+				861639F82B567EE7007FCFFC /* PreferencesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		862982AA2B2C8FC40000C34F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				86C081202B51727300908121 /* Form */,
+				86C0811D2B5171B800908121 /* Map */,
+				862982C92B304BFE0000C34F /* FormVM */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		862982AB2B2C8FCA0000C34F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				862982B12B2CA0AB0000C34F /* FormModel.swift */,
+				86C081252B517A2B00908121 /* Individuals.swift */,
+				86C081272B517A5800908121 /* IndividualsFormatted.swift */,
+				86A9F61D2B56BE8300CE5E35 /* IndividualsSupa.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		862982AC2B2C8FD30000C34F /* FormView */ = {
+			isa = PBXGroup;
+			children = (
+				862982B32B2CA45B0000C34F /* Form Content */,
+				862982AD2B2C8FF90000C34F /* FormView.swift */,
+			);
+			path = FormView;
+			sourceTree = "<group>";
+		};
+		862982AF2B2C9BF40000C34F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				862982B02B2C9BFA0000C34F /* APIs */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		862982B02B2C9BFA0000C34F /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				86C081232B51794500908121 /* MovebankFetch.swift */,
+				861639FA2B568CAF007FCFFC /* SupabaseAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		862982B32B2CA45B0000C34F /* Form Content */ = {
+			isa = PBXGroup;
+			children = (
+				862982B42B2CA46D0000C34F /* FormContentBuilderImpl.swift */,
+			);
+			path = "Form Content";
+			sourceTree = "<group>";
+		};
+		862982B62B2CA5A10000C34F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				862982B72B2CA5BB0000C34F /* UICollectionView+Identifier.swift */,
+				862982B92B2CA6200000C34F /* UICollectionViewCell+CleanUp.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		862982BB2B2CA6DB0000C34F /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				862982BC2B2CA70D0000C34F /* FormButtonCollectionViewCell.swift */,
+				862982BE2B2CA9420000C34F /* FormTextCollectionViewCell.swift */,
+				862982C02B2CAAEC0000C34F /* FormDateCollectionViewCell.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		862982C22B2CABA80000C34F /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				862982C32B2CABC60000C34F /* FormCompositionalLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		862982C92B304BFE0000C34F /* FormVM */ = {
+			isa = PBXGroup;
+			children = (
+				862982BB2B2CA6DB0000C34F /* CollectionViewCells */,
+			);
+			path = FormVM;
+			sourceTree = "<group>";
+		};
+		862F4E552B5697C8004980DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86A9F61F2B56C75500CE5E35 /* Species */ = {
+			isa = PBXGroup;
+			children = (
+				862F4E582B569B1D004980DF /* SpeciesView.swift */,
+				86A9F6202B56C77100CE5E35 /* SpecieDetailView.swift */,
+			);
+			path = Species;
+			sourceTree = "<group>";
+		};
+		86C0811D2B5171B800908121 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				86C0811E2B5171D600908121 /* MapViewController.swift */,
+				86C081212B5172A400908121 /* MapViewControllerWrapper.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		86C081202B51727300908121 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				862982C52B2CB02A0000C34F /* ViewController.swift */,
+				862982C72B2CB7530000C34F /* ViewControllerWrapper.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
 		86DF7E362B2C8A5B00F61E51 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +285,7 @@
 				86DF7E522B2C8A5E00F61E51 /* ailerons-app-iosTests */,
 				86DF7E5C2B2C8A5E00F61E51 /* ailerons-app-iosUITests */,
 				86DF7E402B2C8A5B00F61E51 /* Products */,
+				862F4E552B5697C8004980DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,8 +302,12 @@
 		86DF7E412B2C8A5B00F61E51 /* ailerons-app-ios */ = {
 			isa = PBXGroup;
 			children = (
+				862982B62B2CA5A10000C34F /* Extensions */,
+				862982AF2B2C9BF40000C34F /* Utilities */,
+				862982AB2B2C8FCA0000C34F /* Model */,
+				862982AA2B2C8FC40000C34F /* ViewModel */,
+				862982A92B2C8FBF0000C34F /* View */,
 				86DF7E422B2C8A5B00F61E51 /* ailerons_app_iosApp.swift */,
-				86DF7E442B2C8A5B00F61E51 /* ContentView.swift */,
 				86DF7E462B2C8A5E00F61E51 /* Assets.xcassets */,
 				86DF7E482B2C8A5E00F61E51 /* Preview Content */,
 			);
@@ -143,6 +355,14 @@
 			dependencies = (
 			);
 			name = "ailerons-app-ios";
+			packageProductDependencies = (
+				862F4E4B2B569749004980DF /* Auth */,
+				862F4E4D2B569749004980DF /* Functions */,
+				862F4E4F2B569749004980DF /* PostgREST */,
+				862F4E512B569749004980DF /* Realtime */,
+				862F4E532B569749004980DF /* Storage */,
+				862F4E562B5697C8004980DF /* Supabase */,
+			);
 			productName = "ailerons-app-ios";
 			productReference = 86DF7E3F2B2C8A5B00F61E51 /* ailerons-app-ios.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +437,9 @@
 				es,
 			);
 			mainGroup = 86DF7E362B2C8A5B00F61E51;
+			packageReferences = (
+				862F4E4A2B569720004980DF /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = 86DF7E402B2C8A5B00F61E51 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +482,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				862982B52B2CA46D0000C34F /* FormContentBuilderImpl.swift in Sources */,
+				862982C42B2CABC60000C34F /* FormCompositionalLayout.swift in Sources */,
+				862982AE2B2C8FF90000C34F /* FormView.swift in Sources */,
+				86C081262B517A2B00908121 /* Individuals.swift in Sources */,
+				862982BA2B2CA6200000C34F /* UICollectionViewCell+CleanUp.swift in Sources */,
+				862982C82B2CB7530000C34F /* ViewControllerWrapper.swift in Sources */,
 				86DF7E452B2C8A5B00F61E51 /* ContentView.swift in Sources */,
+				862982C12B2CAAEC0000C34F /* FormDateCollectionViewCell.swift in Sources */,
+				861639FB2B568CAF007FCFFC /* SupabaseAPI.swift in Sources */,
+				862982C62B2CB02A0000C34F /* ViewController.swift in Sources */,
+				86A9F61E2B56BE8300CE5E35 /* IndividualsSupa.swift in Sources */,
+				862F4E592B569B1D004980DF /* SpeciesView.swift in Sources */,
+				86C081282B517A5800908121 /* IndividualsFormatted.swift in Sources */,
+				861639F42B554175007FCFFC /* MapViewWrapper.swift in Sources */,
+				862982BD2B2CA70D0000C34F /* FormButtonCollectionViewCell.swift in Sources */,
+				862982B82B2CA5BB0000C34F /* UICollectionView+Identifier.swift in Sources */,
+				86A9F61C2B56B47200CE5E35 /* SpicieRow.swift in Sources */,
+				861639F92B567EE7007FCFFC /* PreferencesView.swift in Sources */,
 				86DF7E432B2C8A5B00F61E51 /* ailerons_app_iosApp.swift in Sources */,
+				86C081242B51794500908121 /* MovebankFetch.swift in Sources */,
+				862982BF2B2CA9420000C34F /* FormTextCollectionViewCell.swift in Sources */,
+				86C081222B5172A400908121 /* MapViewControllerWrapper.swift in Sources */,
+				861639F72B55454C007FCFFC /* MapBtn.swift in Sources */,
+				862982B22B2CA0AB0000C34F /* FormModel.swift in Sources */,
+				86A9F6212B56C77100CE5E35 /* SpecieDetailView.swift in Sources */,
+				86C0811F2B5171D600908121 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +596,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -406,7 +653,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -432,7 +679,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,7 +709,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,7 +732,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MZ3E779E6C;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jeremie-ada.ailerons-app-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,7 +752,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MZ3E779E6C;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jeremie-ada.ailerons-app-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -592,6 +839,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		862F4E4A2B569720004980DF /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		862F4E4B2B569749004980DF /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 862F4E4A2B569720004980DF /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		862F4E4D2B569749004980DF /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 862F4E4A2B569720004980DF /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		862F4E4F2B569749004980DF /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 862F4E4A2B569720004980DF /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		862F4E512B569749004980DF /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 862F4E4A2B569720004980DF /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		862F4E532B569749004980DF /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 862F4E4A2B569720004980DF /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		862F4E562B5697C8004980DF /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 862F4E4A2B569720004980DF /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 86DF7E372B2C8A5B00F61E51 /* Project object */;
 }
