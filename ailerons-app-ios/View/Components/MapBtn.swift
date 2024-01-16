@@ -21,7 +21,7 @@ struct MapBtn: View {
                 .padding(10)
                 .frame(maxWidth: 50)
                 .background(
-                    .regularMaterial,
+                    .thinMaterial,
                     in: RoundedRectangle(cornerRadius: 8, style: .continuous)
                 )
             

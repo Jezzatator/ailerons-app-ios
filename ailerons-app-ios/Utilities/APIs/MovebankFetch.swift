@@ -43,7 +43,7 @@ class MovebankFetch: ObservableObject {
 
         if let jsonIndividuals = try? decoder.decode(Individuals.self, from: json) {
             fetchedIndividuals = jsonIndividuals.individuals
-            individual = Array(fetchedIndividuals.prefix(5))
+            individual = Array(fetchedIndividuals.prefix(10))
         } else {
             print("Error decode JSON")
         }

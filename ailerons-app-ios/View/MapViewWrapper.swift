@@ -12,9 +12,14 @@ struct MapViewWrapper: View {
     var body: some View {
         ZStack{
             MapViewControllerWrapper()
-                .edgesIgnoringSafeArea(.top)
-                .edgesIgnoringSafeArea(.bottom)
+                .edgesIgnoringSafeArea(.all)
             HStack() {
+                VStack{
+                    MapBtn(systemIcon: "gear")
+                        .padding(.leading, 7)
+                        .padding(.top, 3)
+                    Spacer()
+                }
                 Spacer()
                 VStack{
                     MapBtn(systemIcon: "square.3.layers.3d")
@@ -22,6 +27,7 @@ struct MapViewWrapper: View {
                     MapBtn(systemIcon: "fish")
                     Spacer()
                 }
+                .padding(.top, 55)
             }
         }
     }
