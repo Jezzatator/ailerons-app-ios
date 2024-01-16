@@ -6,13 +6,36 @@
 //
 
 import Foundation
-//
-//class SupabaseAPI: ObservableObject {
-//    @Published var fetchedIndividuals: [Individual] = []
-//    @Published var individual: [Individual] = []
-//    
-//    let client = SupabaseClient(supabaseURL: URL(string: "https://xyzcompany.supabase.co")!, supabaseKey: "public-anon-key")
-//
-//
-//    
-//}
+import Supabase
+
+class SupabaseAPI: ObservableObject {
+    
+    @Published var testIndiv: [SupaIndiv] = []
+    
+    let supabase = SupabaseClient(supabaseURL: URL(string: ProcessInfo.processInfo.environment["SUPABASE_URL"]!)!, supabaseKey: ProcessInfo.processInfo.environment["SUPABASE_KEY"]!)
+    
+    func fetch() async {
+        do {
+        let data: [SupaIndiv] = try await supabase.database
+                .from("individual")
+                .select()
+                .execute()
+                .value
+            
+            DispatchQueue.main.async {
+                self.testIndiv = data
+            }
+        } catch {
+            print("Error while fetching supabase : \(error.localizedDescription)")
+        }
+    }
+    
+}
+
+struct SupaIndiv: Decodable, Hashable {
+    var id: Int
+    var individual_name: String
+    var common_name: String
+    var binomial_name: String
+    var age: Int
+}

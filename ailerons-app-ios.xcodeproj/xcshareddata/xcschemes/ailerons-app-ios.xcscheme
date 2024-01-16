@@ -79,6 +79,16 @@
             value = "oslogToStdio"
             isEnabled = "YES">
          </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "SUPABASE_KEY"
+            value = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJkZGl6d3N0amRpbnp5enZudXVuIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcwNDg5NTcwMywiZXhwIjoyMDIwNDcxNzAzfQ.cc143ySM1DZgtb1ADUP7p_HRdIpbaLp3X4ICf94rZD4"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "SUPABASE_URL"
+            value = "https://rddizwstjdinzyzvnuun.supabase.co"
+            isEnabled = "YES">
+         </EnvironmentVariable>
       </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
