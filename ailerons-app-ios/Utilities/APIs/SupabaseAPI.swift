@@ -16,14 +16,14 @@ class SupabaseAPI: ObservableObject {
     
     func fetch() async {
         do {
-        let data: [SupaIndiv] = try await supabase.database
+            let data: [SupaIndiv] = try await supabase.database
                 .from("individual")
                 .select()
                 .execute()
                 .value
             
-            DispatchQueue.main.async {
-                self.testIndiv = data
+            DispatchQueue.main.async { [weak self] in
+                self?.testIndiv = data
             }
         } catch {
             print("Error while fetching supabase : \(error.localizedDescription)")
