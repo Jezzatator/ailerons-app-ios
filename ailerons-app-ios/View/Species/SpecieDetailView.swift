@@ -25,6 +25,7 @@ struct SpecieDetailView: View {
                     Text("\(individual.binomialName) / \(individual.commonName)")
                         .font(.title2)
                         .italic()
+
                 }
                 
                 HStack {
@@ -81,3 +82,4 @@ struct ToyShape: Identifiable {
             var count: Double
             var id = UUID()
 }
+

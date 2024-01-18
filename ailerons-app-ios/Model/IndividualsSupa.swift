@@ -6,9 +6,9 @@
 //
 
 import Foundation
+import MapKit
 
 struct SupaIndiv: Codable, Identifiable {
-
     
     let id: Int
     let individualName: String
@@ -22,6 +22,8 @@ struct SupaIndiv: Codable, Identifiable {
     let description: String
     let icon: Int
     let picture: String
+    let pointsGeoJSON: [PointGeoJSON]?
+    let linesGeoJSON: [LineGeoJSON]?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -36,14 +38,16 @@ struct SupaIndiv: Codable, Identifiable {
         case description
         case icon
         case picture
+        case pointsGeoJSON = "point_geojson"
+        case linesGeoJSON = "line_geojson"
     }
 
 }
 
-struct lineGeoJSON: Decodable, Identifiable {
+struct LineGeoJSON: Codable, Identifiable {
     let id: Int
     let individualID: Int
-    let geoJSON: String
+    let geoJSON: GeoJSON
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -52,14 +56,42 @@ struct lineGeoJSON: Decodable, Identifiable {
     }
 }
 
-struct pointGeoJSON: Decodable, Identifiable {
+struct PointGeoJSON: Codable, Identifiable {
     let id: Int
     let individualID: Int
-    let geoJSON: String
+    let geoJSON: GeoJSON
     
     enum CodingKeys: String, CodingKey {
         case id
         case individualID = "individual_id"
         case geoJSON = "geojson"
+    }
+}
+
+// MARK: - GeoJSON
+struct GeoJSON: Codable {
+    let type: String
+    let geometry: Geometry
+    let properties: Properties
+}
+
+// MARK: - Geometry
+struct Geometry: Codable {
+    let type: String
+    let coordinates: [Double]
+}
+
+// MARK: - Properties
+struct Properties: Codable {
+    let individualID: Int
+    let indCommonName, indName: String
+    let icon: Int
+    let timestamp: String
+
+    enum CodingKeys: String, CodingKey {
+        case individualID = "individual_id"
+        case indCommonName = "ind_common_name"
+        case indName = "ind_name"
+        case icon, timestamp
     }
 }
