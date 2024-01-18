@@ -26,6 +26,8 @@ final class TabRouter: ObservableObject {
 struct ailerons_app_iosApp: App {
 
     @StateObject var router: TabRouter = .init()
+    private let vmSupaApi = SupabaseAPI()
+
     
     var body: some Scene {
         WindowGroup {
@@ -64,6 +66,10 @@ struct ailerons_app_iosApp: App {
                 
                 UITabBar.appearance().standardAppearance = appearance
                 UITabBar.appearance().scrollEdgeAppearance = appearance
+                
+                Task {
+                    await vmSupaApi.fetch()
+                }
                 
             }
         }

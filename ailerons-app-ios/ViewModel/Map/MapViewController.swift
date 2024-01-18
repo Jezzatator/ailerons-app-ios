@@ -21,6 +21,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     private var cancellables: Set<AnyCancellable> = []
     private let movebankFetch = MovebankFetch()
+    private let vmSupaApi = SupabaseAPI()
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +31,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         setMapConstraints()
         
         // Lance la récupération des données
-        movebankFetch.fetchData { [weak self] in
-            self?.makeMarker(data: self?.movebankFetch.individual ?? [])
-        }
+        // récupération lancé on Appear de l'app
+//        movebankFetch.fetchData { [weak self] in
+//            self?.makeMarker(data: self?.movebankFetch.individual ?? [])
+//        }
 
         // Abonnement aux changements des données
-        movebankFetch.$fetchedIndividuals
+        vmSupaApi.$testIndiv
             .sink { [weak self] individuals in
                 self?.makeMarker(data: individuals)
             }
@@ -114,7 +116,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
 
     // Creation des annotations et lignes
-    func makeMarker(data: [Individual]) {
+    func makeMarker(data: [SupaIndiv]) {
         print("Data : \(data.count)")
         
         if data.count == 10 {
@@ -127,7 +129,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 for  individual in data {
                     
                     // utilisation de map pour créer un tableau locationFormatted
-                    let locationFormatted = individual.locations.map { Location in
+                    let locationFormatted = individual.pointGeoJSON.map { Location in
                         return LocationFormatted(timestamp: Location.timestamp,
                                                  coordinate:
                                                     CLLocationCoordinate2D(
