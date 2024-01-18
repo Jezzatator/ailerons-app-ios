@@ -19,9 +19,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     private var diplayedOverlays = [MKPolygon]()
     
-    private var cancellables: Set<AnyCancellable> = []
-    private let movebankFetch = MovebankFetch()
-    private let vmSupaApi = SupabaseAPI()
+//    private var cancellables: Set<AnyCancellable> = []
+//    private let movebankFetch = MovebankFetch()
+     let vmSupaApi = SupabaseAPI()
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,12 +36,19 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 //            self?.makeMarker(data: self?.movebankFetch.individual ?? [])
 //        }
 
-        // Abonnement aux changements des données
-        vmSupaApi.$testIndiv
-            .sink { [weak self] individuals in
-                self?.makeMarker(data: individuals)
+        Task {
+            await vmSupaApi.fetch { [weak self] in
+                print("la closure s'est échapée!")
+                self?.makeMarker(data: self?.vmSupaApi.testIndiv ?? [])
             }
-            .store(in: &cancellables)
+        }
+        
+        // Abonnement aux changements des données
+//        vmSupaApi.$testIndiv
+//            .sink { [weak self] individuals in
+//                self?.makeMarker(data: individuals)
+//            }
+//            .store(in: &cancellables)
         
         mapView.addOverlays(diplayedOverlays)
     }
@@ -119,7 +126,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     func makeMarker(data: [SupaIndiv]) {
         print("Data : \(data.count)")
         
-        if data.count == 10 {
             DispatchQueue.global().async { [weak self] in
                 
                 // Réinitialisez les overlays pour éviter les doublons
@@ -129,17 +135,17 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 for  individual in data {
                     
                     // utilisation de map pour créer un tableau locationFormatted
-                    let locationFormatted = individual.pointGeoJSON.map { Location in
-                        return LocationFormatted(timestamp: Location.timestamp,
+                    let locationFormatted = individual.pointsGeoJSON!.map { Location in
+                        return LocationFormatted(timestamp: Int(Location.geoJSON.properties.timestamp) ?? 404,
                                                  coordinate:
                                                     CLLocationCoordinate2D(
-                                                        latitude: Location.locationLat,
-                                                        longitude: Location.locationLong),
-                                                 title:  individual.individualTaxonCanonicalName,
-                                                 subtitle: String(Location.timestamp)
+                                                        latitude: Location.geoJSON.geometry.coordinates.last!,
+                                                        longitude: Location.geoJSON.geometry.coordinates.first!),
+                                                 title:  individual.commonName,
+                                                 subtitle: Location.geoJSON.properties.timestamp
                         )
                     }
-                    
+                    print("locationFormatted : \(locationFormatted)")
                     self?.drawRoute(routeData: locationFormatted)
                     
                     DispatchQueue.main.async {
@@ -148,7 +154,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                         
                     }
                 }
-            }
         }
     }
 
