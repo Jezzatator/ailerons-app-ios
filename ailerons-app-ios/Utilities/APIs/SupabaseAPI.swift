@@ -15,7 +15,7 @@ class SupabaseAPI: ObservableObject {
 
     let supabase = SupabaseClient(supabaseURL: URL(string: ProcessInfo.processInfo.environment["SUPABASE_URL"]!)!, supabaseKey: ProcessInfo.processInfo.environment["SUPABASE_KEY"]!)
     
-    func fetch() async {
+    func fetch(completion: @escaping () -> Void) async {
         do {
             let individualData: [SupaIndiv] = try await supabase.database
                             .from("individual")
@@ -51,9 +51,9 @@ class SupabaseAPI: ObservableObject {
                             )
                         }
             
-            print(joinedData)
             DispatchQueue.main.async {
                 self.testIndiv = joinedData
+                completion()
             }
         } catch {
             print("Error while fetching supabase : \(error.localizedDescription)")

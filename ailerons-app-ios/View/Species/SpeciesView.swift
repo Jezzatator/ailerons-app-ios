@@ -10,6 +10,8 @@ import SwiftUI
 struct SpeciesView: View {
     @StateObject var supabaseVM = SupabaseAPI()
     
+     private var indivs: [SupaIndiv] = []
+
     var body: some View {
         NavigationStack {
             List {
@@ -26,8 +28,9 @@ struct SpeciesView: View {
         .onAppear() {
             Task {
                 if supabaseVM.testIndiv.isEmpty {
-                    await supabaseVM.fetch()
-                    print("Number of items fetched: \(supabaseVM.testIndiv.count)")
+                    await supabaseVM.fetch {
+                        print("Number of items fetched: \(supabaseVM.testIndiv.count)")
+                    }
                 }
             }
         }
