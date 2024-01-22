@@ -20,12 +20,14 @@ class IndividualFormatted: NSObject {
 }
 
 class LocationFormatted: NSObject, MKAnnotation {
+    let individualID: Int
     let timestamp: Int
     let coordinate: CLLocationCoordinate2D
     let title: String?
     let subtitle: String?
     
-    init(timestamp: Int, coordinate: CLLocationCoordinate2D, title: String, subtitle: String) {
+    init(individualID: Int, timestamp: Int, coordinate: CLLocationCoordinate2D, title: String, subtitle: String) {
+        self.individualID = individualID
         self.timestamp = timestamp
         self.coordinate = coordinate
         self.title = title

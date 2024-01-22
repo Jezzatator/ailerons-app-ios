@@ -23,14 +23,14 @@ class SupabaseAPI: ObservableObject {
                             .execute()
                             .value
                         
-//            print("Indiv: \(individualData)")
+            //print("Indiv: \(individualData)")
             let pointsGeoJSONData: [PointGeoJSON] = try await supabase.database
                             .from("point_geojson")
                             .select()
                             .execute()
                             .value
                         
-//            print("GeoJSON: \(pointsGeoJSONData)")
+            //print("GeoJSON: \(pointsGeoJSONData)")
                         // Perform a manual join based on the foreign key relationship
             let joinedData = individualData.map { indiv in
                             SupaIndiv(

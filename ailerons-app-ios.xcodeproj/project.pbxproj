@@ -11,6 +11,9 @@
 		861639F72B55454C007FCFFC /* MapBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861639F62B55454C007FCFFC /* MapBtn.swift */; };
 		861639F92B567EE7007FCFFC /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861639F82B567EE7007FCFFC /* PreferencesView.swift */; };
 		861639FB2B568CAF007FCFFC /* SupabaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861639FA2B568CAF007FCFFC /* SupabaseAPI.swift */; };
+		86179B532B596D0A00C5A228 /* PreferencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86179B522B596D0A00C5A228 /* PreferencesViewModel.swift */; };
+		86179BAF2B5EAEB500C5A228 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86179BAE2B5EAEB500C5A228 /* WebView.swift */; };
+		86179BB22B5EC56F00C5A228 /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86179BB12B5EC56F00C5A228 /* PopoverView.swift */; };
 		862982AE2B2C8FF90000C34F /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982AD2B2C8FF90000C34F /* FormView.swift */; };
 		862982B22B2CA0AB0000C34F /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982B12B2CA0AB0000C34F /* FormModel.swift */; };
 		862982B52B2CA46D0000C34F /* FormContentBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862982B42B2CA46D0000C34F /* FormContentBuilderImpl.swift */; };
@@ -68,6 +71,10 @@
 		861639F62B55454C007FCFFC /* MapBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBtn.swift; sourceTree = "<group>"; };
 		861639F82B567EE7007FCFFC /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		861639FA2B568CAF007FCFFC /* SupabaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseAPI.swift; sourceTree = "<group>"; };
+		86179B522B596D0A00C5A228 /* PreferencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewModel.swift; sourceTree = "<group>"; };
+		86179BAE2B5EAEB500C5A228 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		86179BB02B5EB29E00C5A228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		86179BB12B5EC56F00C5A228 /* PopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
 		862982AD2B2C8FF90000C34F /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		862982B12B2CA0AB0000C34F /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
 		862982B42B2CA46D0000C34F /* FormContentBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormContentBuilderImpl.swift; sourceTree = "<group>"; };
@@ -136,6 +143,8 @@
 			children = (
 				861639F62B55454C007FCFFC /* MapBtn.swift */,
 				86A9F61B2B56B47200CE5E35 /* SpicieRow.swift */,
+				86179BAE2B5EAEB500C5A228 /* WebView.swift */,
+				86179BB12B5EC56F00C5A228 /* PopoverView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -160,6 +169,7 @@
 				86C081202B51727300908121 /* Form */,
 				86C0811D2B5171B800908121 /* Map */,
 				862982C92B304BFE0000C34F /* FormVM */,
+				86179B522B596D0A00C5A228 /* PreferencesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -302,6 +312,7 @@
 		86DF7E412B2C8A5B00F61E51 /* ailerons-app-ios */ = {
 			isa = PBXGroup;
 			children = (
+				86179BB02B5EB29E00C5A228 /* Info.plist */,
 				862982B62B2CA5A10000C34F /* Extensions */,
 				862982AF2B2C9BF40000C34F /* Utilities */,
 				862982AB2B2C8FCA0000C34F /* Model */,
@@ -488,6 +499,7 @@
 				86C081262B517A2B00908121 /* Individuals.swift in Sources */,
 				862982BA2B2CA6200000C34F /* UICollectionViewCell+CleanUp.swift in Sources */,
 				862982C82B2CB7530000C34F /* ViewControllerWrapper.swift in Sources */,
+				86179BB22B5EC56F00C5A228 /* PopoverView.swift in Sources */,
 				86DF7E452B2C8A5B00F61E51 /* ContentView.swift in Sources */,
 				862982C12B2CAAEC0000C34F /* FormDateCollectionViewCell.swift in Sources */,
 				861639FB2B568CAF007FCFFC /* SupabaseAPI.swift in Sources */,
@@ -495,6 +507,8 @@
 				86A9F61E2B56BE8300CE5E35 /* IndividualsSupa.swift in Sources */,
 				862F4E592B569B1D004980DF /* SpeciesView.swift in Sources */,
 				86C081282B517A5800908121 /* IndividualsFormatted.swift in Sources */,
+				86179BAF2B5EAEB500C5A228 /* WebView.swift in Sources */,
+				86179B532B596D0A00C5A228 /* PreferencesViewModel.swift in Sources */,
 				861639F42B554175007FCFFC /* MapViewWrapper.swift in Sources */,
 				862982BD2B2CA70D0000C34F /* FormButtonCollectionViewCell.swift in Sources */,
 				862982B82B2CA5BB0000C34F /* UICollectionView+Identifier.swift in Sources */,
@@ -674,6 +688,7 @@
 				DEVELOPMENT_TEAM = MZ3E779E6C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ailerons-app-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -704,6 +719,7 @@
 				DEVELOPMENT_TEAM = MZ3E779E6C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ailerons-app-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

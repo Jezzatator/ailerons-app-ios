@@ -131,29 +131,33 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 // Réinitialisez les overlays pour éviter les doublons
                 self?.diplayedOverlays.removeAll()
                 
+                var locationFormatted = [LocationFormatted]()
+                
                 // Boucle for each
                 for  individual in data {
                     
                     // utilisation de map pour créer un tableau locationFormatted
-                    let locationFormatted = individual.pointsGeoJSON!.map { Location in
-                        return LocationFormatted(timestamp: Int(Location.geoJSON.properties.timestamp) ?? 404,
+                    locationFormatted = (individual.pointsGeoJSON?.first!.geojson.features.map { Location in
+                        let timeStamp = Location.properties.timestamp.toInt()
+                        return LocationFormatted(individualID: individual.id, timestamp: timeStamp,
                                                  coordinate:
                                                     CLLocationCoordinate2D(
-                                                        latitude: Location.geoJSON.geometry.coordinates.last!,
-                                                        longitude: Location.geoJSON.geometry.coordinates.first!),
-                                                 title:  individual.commonName,
-                                                 subtitle: Location.geoJSON.properties.timestamp
+                                                        latitude: Location.geometry.coordinates.last!,
+                                                        longitude: Location.geometry.coordinates.first!),
+                                                 title:  individual.individualName,
+                                                 subtitle: ("\(individual.commonName) - \(timeStamp)")
                         )
-                    }
-                    print("locationFormatted : \(locationFormatted)")
-                    self?.drawRoute(routeData: locationFormatted)
+                            
+                    })!
+                    print(locationFormatted.count)
+                    self?.drawRoute(routeData: locationFormatted )
                     
-                    DispatchQueue.main.async {
-                        self?.mapView.addOverlays(self?.diplayedOverlays ?? [])
-                        self?.mapView.addAnnotations(locationFormatted)
-                        
-                    }
                 }
+                DispatchQueue.main.async {
+                    self?.mapView.addOverlays(self?.diplayedOverlays ?? [])
+                    self?.mapView.addAnnotations(locationFormatted)
+                }
+
         }
     }
 

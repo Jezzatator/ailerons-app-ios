@@ -8,37 +8,62 @@
 import SwiftUI
 
 struct PreferencesView: View {
-    let unites = ["Métriques", "Impériales"]
-    @State private var unite = "Métriques"
+    @Environment(\.dismiss) var dismiss
+    @ObservedObject var vmPreferences = PreferencesViewModel()
     
     var body: some View {
-        VStack {
+        NavigationStack {
+            
             Form {
-                Picker("Unités de mesure", selection: $unite) {
-                    ForEach(unites, id: \.self) {
-                        Text($0)
+                Section("Réglagles") {
+                    
+                    Picker("Unité de mesure", selection: $vmPreferences.selectedUnit) {
+                                   ForEach(UnitOfMeasurement.allCases, id: \.self) { unit in
+                                       Text(unit.rawValue)
+                        }
                     }
                 }
                 
-                Picker("Unités de mesure", selection: $unite) {
-                    ForEach(unites, id: \.self) {
-                        Text($0)
+
+            
+                Section("A Propos de Ailerons") {
+                   
+                    NavigationLink(destination: WebView(urlString: "https://www.asso-ailerons.fr/qui-sommes-nous/")) {
+                        Text("Association Ailerons")
+                    }
+
+                    NavigationLink(destination: WebView(urlString: "https://github.com/Jezzatator/ailerons-app-ios")) {
+                        VStack(alignment: .leading) {
+                            Text("Version")
+                            Text("1.0.0")
+                                .fontWeight(.ultraLight)
+                                .foregroundStyle(.secondary)
+                        }
                     }
                 }
-                
-                Picker("Unités de mesure", selection: $unite) {
-                    ForEach(unites, id: \.self) {
-                        Text($0)
-                    }
-                }
-                
             }
+            
             Spacer()
-            Text("Créer et conceptualisé à Ada")
+            VStack {
+                Text("Créer et conceptualisé à Ada Tech School")
+                    .fontWeight(.light)
+                    .foregroundStyle(.gray)
+            }
+            
+
+
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button("Done") {
+                                dismiss()
+                            }
+                        }
+                    }
         }
+        .scrollContentBackground(.hidden)
     }
 }
 
-#Preview {
-    PreferencesView()
-}
+//#Preview {
+//    PreferencesView()
+//}

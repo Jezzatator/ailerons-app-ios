@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-// A faire rendre les bouton bien carré
 struct MapBtn: View {
     
-    //var function?: Any
     var systemIcon: String
+    var action: () -> Void
+
     
     var body: some View {
         Button {
-            //function
+            action()
         } label: {
             Image(systemName: systemIcon)
                 .padding(10)
