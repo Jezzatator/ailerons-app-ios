@@ -7,27 +7,11 @@
 
 import SwiftUI
 
-enum Screen {
-    case map
-    case reglages
-    case fav
-    case individuals
-}
-
-final class TabRouter: ObservableObject {
-    @Published var screen: Screen = .map
-    
-    func change(to screen: Screen) {
-        self.screen = screen
-    }
-}
-
 @main
 struct ailerons_app_iosApp: App {
 
     @StateObject var router: TabRouter = .init()
     private let vmSupaApi = SupabaseAPI()
-    private let vmMapController = MapViewController()
 
     
     var body: some Scene {
@@ -35,7 +19,7 @@ struct ailerons_app_iosApp: App {
             TabView(selection: $router.screen) {
                 
                 //Vue Favories
-                ContentView()
+                FavListView()
                     .badge(3)
                     .tag(Screen.fav)
                     .environmentObject(router)
@@ -70,5 +54,20 @@ struct ailerons_app_iosApp: App {
                 
             }
         }
+    }
+}
+
+enum Screen {
+    case map
+    case reglages
+    case fav
+    case individuals
+}
+
+final class TabRouter: ObservableObject {
+    @Published var screen: Screen = .map
+    
+    func change(to screen: Screen) {
+        self.screen = screen
     }
 }

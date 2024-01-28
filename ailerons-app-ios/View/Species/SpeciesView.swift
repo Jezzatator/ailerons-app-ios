@@ -10,25 +10,34 @@ import SwiftUI
 struct SpeciesView: View {
     @StateObject var supabaseVM = SupabaseAPI()
     
-     private var indivs: [SupaIndiv] = []
+    @State var indivs: [SupaIndiv] = []
 
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(supabaseVM.testIndiv, id: \.id) { indiv in
-                    NavigationLink {
-                        SpecieDetailView(individual: indiv)
-                    } label: {
-                        SpicieRow(binomialName: indiv.binomialName, commonName: indiv.commonName, individualName: indiv.individualName)
-                    }
-                }
-            }
-            .navigationTitle("Espèces")
+            
+            ListView(indivs: indivs, listType: .all)
+
+//            List {
+//                            
+//                // Liste des individus
+//                ForEach(supabaseVM.testIndiv, id: \.id) { indiv in
+//                    
+//                    NavigationLink {
+//                        SpecieDetailView(individual: indiv)
+//                    } label: {
+//                        SpicieRow(binomialName: indiv.binomialName, commonName: indiv.commonName, individualName: indiv.individualName)
+//                    }
+//                }
+//            }
+//            .navigationTitle("Espèces")
         }
+        
         .onAppear() {
+            // Verifie si les données DL et appel le fetch si besoin
             Task {
                 if supabaseVM.testIndiv.isEmpty {
                     await supabaseVM.fetch {
+                        self.indivs = supabaseVM.testIndiv
                         print("Number of items fetched: \(supabaseVM.testIndiv.count)")
                     }
                 }

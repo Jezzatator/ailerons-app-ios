@@ -17,6 +17,7 @@ struct PreferencesView: View {
             Form {
                 Section("Réglagles") {
                     
+                    // Picker pour choisir preference du system de mesure
                     Picker("Unité de mesure", selection: $vmPreferences.selectedUnit) {
                                    ForEach(UnitOfMeasurement.allCases, id: \.self) { unit in
                                        Text(unit.rawValue)
@@ -28,10 +29,12 @@ struct PreferencesView: View {
             
                 Section("A Propos de Ailerons") {
                    
+                    // Lien vers About de l'assos Ailerons
                     NavigationLink(destination: WebView(urlString: "https://www.asso-ailerons.fr/qui-sommes-nous/")) {
                         Text("Association Ailerons")
                     }
 
+                    // Lien vers le repo Github de l'app
                     NavigationLink(destination: WebView(urlString: "https://github.com/Jezzatator/ailerons-app-ios")) {
                         VStack(alignment: .leading) {
                             Text("Version")
@@ -45,7 +48,7 @@ struct PreferencesView: View {
             
             Spacer()
             VStack {
-                Text("Créer et conceptualisé à Ada Tech School")
+                Text("Conceptualisé et dévelopé à Ada Tech School")
                     .fontWeight(.light)
                     .foregroundStyle(.gray)
             }
