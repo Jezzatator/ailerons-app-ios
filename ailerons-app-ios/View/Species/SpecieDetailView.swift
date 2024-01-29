@@ -11,10 +11,8 @@ import MapKit
 
 struct SpecieDetailView: View {
     
-    // State pour le fond de carte
     @State var mapStyle: Int = 0
     
-    // Indiv de la fiche détaillé
     let individual: SupaIndiv
     
     // Données du chart a refacto (profondeurs, luminosité, etc) - à définir avec l'assos
@@ -23,7 +21,7 @@ struct SpecieDetailView: View {
         .init(type: "Sphere", count: 4),
         .init(type: "Pyramid", count: 4)
     ]
-
+    
     var body: some View {
         ScrollView {
             VStack {
@@ -32,7 +30,7 @@ struct SpecieDetailView: View {
                     Text("\(individual.binomialName) / \(individual.commonName)")
                         .font(.title2)
                         .italic()
-
+                    
                 }
                 
                 HStack {
@@ -45,10 +43,10 @@ struct SpecieDetailView: View {
                 .padding(.bottom)
                 
                 // Carte du tracé de ses déplacement
-//                MapViewControllerRepresentable(mapStyle: $mapStyle, mainMap: false)
-//                    .allowsHitTesting(false)
-//                    .frame(height: 200)
-//                    .padding(.bottom)
+                //                MapViewControllerRepresentable(mapStyle: $mapStyle, mainMap: false)
+                //                    .allowsHitTesting(false)
+                //                    .frame(height: 200)
+                //                    .padding(.bottom)
                 
                 // Chart des données à définir
                 Chart {
@@ -57,16 +55,16 @@ struct SpecieDetailView: View {
                         y: .value("Total Count", data[0].count)
                     )
                     LineMark(
-                         x: .value("Shape Type", data[1].type),
-                         y: .value("Total Count", data[1].count)
+                        x: .value("Shape Type", data[1].type),
+                        y: .value("Total Count", data[1].count)
                     )
                     LineMark(
-                         x: .value("Shape Type", data[2].type),
-                         y: .value("Total Count", data[2].count)
+                        x: .value("Shape Type", data[2].type),
+                        y: .value("Total Count", data[2].count)
                     )
                 }
-                    .frame(height: 200)
-                    .padding(.bottom)
+                .frame(height: 200)
+                .padding(.bottom)
                 
                 
                 // Description longue de l'individu - ajout d'image

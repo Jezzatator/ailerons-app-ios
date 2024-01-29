@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ListView: View {
     
-    var indivs: [SupaIndiv]
+    var individuals: [SupaIndiv]
     var listType: ListType
     
     var body: some View {
         List {
             
             // Liste des individus
-            ForEach(indivs, id: \.id) { indiv in
+            ForEach(individuals, id: \.id) { indiv in
                 
                 NavigationLink {
                     SpecieDetailView(individual: indiv)
@@ -35,5 +35,5 @@ enum ListType {
 }
 
 #Preview {
-    ListView(indivs: [], listType: .all)
+    ListView(individuals: [], listType: .all)
 }

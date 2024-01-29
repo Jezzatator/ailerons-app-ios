@@ -8,39 +8,19 @@
 import SwiftUI
 
 struct SpeciesView: View {
-    @StateObject var supabaseVM = SupabaseAPI()
+    @StateObject var speciesViewModel = SpeciesViewModel()
+    @State var individuals: [SupaIndiv] = []
     
-    @State var indivs: [SupaIndiv] = []
-
     var body: some View {
         NavigationStack {
-            
-            ListView(indivs: indivs, listType: .all)
-
-//            List {
-//                            
-//                // Liste des individus
-//                ForEach(supabaseVM.testIndiv, id: \.id) { indiv in
-//                    
-//                    NavigationLink {
-//                        SpecieDetailView(individual: indiv)
-//                    } label: {
-//                        SpicieRow(binomialName: indiv.binomialName, commonName: indiv.commonName, individualName: indiv.individualName)
-//                    }
-//                }
-//            }
-//            .navigationTitle("Espèces")
+            ListView(individuals: individuals, listType: .all)
         }
         
         .onAppear() {
             // Verifie si les données DL et appel le fetch si besoin
             Task {
-                if supabaseVM.testIndiv.isEmpty {
-                    await supabaseVM.fetch {
-                        self.indivs = supabaseVM.testIndiv
-                        print("Number of items fetched: \(supabaseVM.testIndiv.count)")
-                    }
-                }
+                await speciesViewModel.fetchFullDataIndividualsPointsGeoJSON()
+                individuals = speciesViewModel.individuals
             }
         }
     }

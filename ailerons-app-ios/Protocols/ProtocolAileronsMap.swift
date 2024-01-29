@@ -13,12 +13,8 @@ protocol AileronsMap {
     var displayedOverlays: [MKPolygon] { get set }
     
     func loadMapData()
-    
     func setupMap()
-    
     func makeMarker(data: [SupaIndiv])
-    
     func drawRoute(routeData: [LocationFormatted])
-    
     func setMapType(type: MKMapType)
 }

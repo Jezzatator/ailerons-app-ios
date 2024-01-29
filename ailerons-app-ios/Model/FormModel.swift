@@ -20,7 +20,7 @@ protocol FormSectionItem {
 
 // Section Component
 
-final class FormSectionComponent: FormSectionItem, Hashable {
+final class FormSectionComponent: FormSectionItem {
     
     var id: UUID = UUID()
     var items: [FormComponent]
@@ -28,6 +28,11 @@ final class FormSectionComponent: FormSectionItem, Hashable {
     init(items: [FormComponent]) {
         self.items = items
     }
+}
+
+// MARK: Hashable
+
+extension FormSectionComponent: Hashable {
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
@@ -36,7 +41,6 @@ final class FormSectionComponent: FormSectionItem, Hashable {
     static func == (lhs: FormSectionComponent, rhs: FormSectionComponent) -> Bool {
         lhs.id == rhs.id
     }
-    
 }
  
 // Form Component

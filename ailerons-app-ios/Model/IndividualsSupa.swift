@@ -44,6 +44,7 @@ struct SupaIndiv: Codable, Identifiable {
 
 }
 
+// Chaque struct dans un fichier
 struct LineGeoJSON: Codable, Identifiable {
     let id: Int
     let individualID: Int

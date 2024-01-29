@@ -8,42 +8,39 @@
 import SwiftUI
 
 @main
-struct ailerons_app_iosApp: App {
-
+struct AileronsApp: App {
+    
     @StateObject var router: TabRouter = .init()
-    private let vmSupaApi = SupabaseAPI()
-
     
     var body: some Scene {
         WindowGroup {
             TabView(selection: $router.screen) {
-                
                 //Vue Favories
-                FavListView()
+                FavouritesListView()
                     .badge(3)
                     .tag(Screen.fav)
                     .environmentObject(router)
-                    .tabItem { Label("Favories", systemImage: "star")}
+                    .tabItem { Label("Favories", systemImage: "star") }
                 
                 // Vue Carte
                 MapViewWrapper()
                     .tag(Screen.map)
                     .environmentObject(router)
-                    .tabItem { Label("Carte", systemImage: "map")}
-
+                    .tabItem { Label("Carte", systemImage: "map") }
+                
                 // Vue liste animaux
                 SpeciesView()
                     .tag(Screen.individuals)
                     .environmentObject(router)
-                    .tabItem { Label("Espèces", systemImage: "book.pages")}
+                    .tabItem { Label("Espèces", systemImage: "book.pages") }
                 
-                // Vue Reglages
-                PreferencesView()
+                // Vue Actualités
+                PreferencesView() //Mock pour tester la TabView
                     .badge(10)
                     .tag(Screen.reglages)
                     .environmentObject(router)
-                    .tabItem { Label("Actualités", systemImage: "newspaper")}
-                
+                    .tabItem { Label("Actualités", systemImage: "newspaper") }
+
             }
             .onAppear() {
                 let appearance = UITabBarAppearance()
@@ -51,7 +48,6 @@ struct ailerons_app_iosApp: App {
                 
                 UITabBar.appearance().standardAppearance = appearance
                 UITabBar.appearance().scrollEdgeAppearance = appearance
-                
             }
         }
     }

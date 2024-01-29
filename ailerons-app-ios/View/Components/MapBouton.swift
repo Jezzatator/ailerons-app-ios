@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MapBtn: View {
+struct MapBouton: View {
     
     var systemIcon: String
     var action: () -> Void

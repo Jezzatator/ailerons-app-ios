@@ -20,9 +20,9 @@ class DetailMapViewController: UIViewController, AileronsMap, MKMapViewDelegate 
         return map
     }()
     
-    private let vmSupaApi: SupabaseAPI
+    private let vmSupaApi: SupbaseAPIClientProtocol
     
-    init(diplayedOverlays: [MKPolygon] = [MKPolygon](), vmSupaApi: SupabaseAPI = SupabaseAPI()) {
+    init(diplayedOverlays: [MKPolygon] = [MKPolygon](), vmSupaApi: SupbaseAPIClientProtocol = SupabaseAPIClient()) {
         self.displayedOverlays = diplayedOverlays
         self.vmSupaApi = vmSupaApi
         super.init(nibName: nil, bundle: nil)
@@ -42,12 +42,12 @@ class DetailMapViewController: UIViewController, AileronsMap, MKMapViewDelegate 
     func loadMapData() {
         
         //Refacto pour 1 check si testIndiv != empty 2/ testIndiv contien l'indiv de la fiche detaillé 3/ fetch l'info ou outilisé la donnée
-        Task {
-            await vmSupaApi.fetch{ [weak self] in
-            print("Detailled Map")
-                self?.makeMarker(data: self!.vmSupaApi.testIndiv)
-            }
-        }
+//        Task {
+//            await vmSupaApi.fetch{ [weak self] in
+//            print("Detailled Map")
+//                self?.makeMarker(data: self!.vmSupaApi.testIndiv)
+//            }
+//        }
     }
     
     func setupMap() {

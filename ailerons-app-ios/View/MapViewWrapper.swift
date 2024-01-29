@@ -30,8 +30,8 @@ struct MapViewWrapper: View {
         
         ZStack{
             // Carte générale
-            MapViewControllerRepresentable(mapStyle: $mapStyle)
-                .ignoresSafeArea()
+            MapViewControllerRepresentable(mapStyle: .constant(mapStyle))
+                .ignoresSafeArea(.all)
             
             // Stacke des réglages et boutons
             HStack() {
@@ -39,11 +39,11 @@ struct MapViewWrapper: View {
                 VStack{
                     
                     // Bouton régalges
-                    MapBtn(systemIcon: "gear") {
+                    MapBouton(systemIcon: "gear") {
                         isPresented.toggle()
                     }
-                        .padding(.leading, 7)
-                        .padding(.top, 3)
+                    .padding(.leading, 7)
+                    .padding(.top, 3)
                     Spacer()
                 }
                 Spacer()
@@ -55,34 +55,34 @@ struct MapViewWrapper: View {
                         Button("Standard") { mapStyle = .standard }
                         Button("Satellite") { mapStyle = .satellite }
                         Button("Hybrid") { mapStyle = .hybrid }
-                                            .presentationCompactAdaptation(.popover)
-                                            .scrollContentBackground(.hidden)
-                                            .presentationBackground(.thinMaterial)
-                                    } label: {
-                                        MapBtn(systemIcon: "square.3.layers.3d") { }
-                                    }
-                        
+                            .presentationCompactAdaptation(.popover)
+                            .scrollContentBackground(.hidden)
+                            .presentationBackground(.thinMaterial)
+                    } label: {
+                        MapBouton(systemIcon: "square.3.layers.3d") { }
+                    }
+                    
                     
                     // Bouton reglages du cadre des timestamps a afficher
-                    MapBtn(systemIcon: "clock.arrow.circlepath"){ self.presentPopupClock = true }
+                    MapBouton(systemIcon: "clock.arrow.circlepath"){ self.presentPopupClock = true }
                         .popover(isPresented: $presentPopupClock) {
                             PopoverView(popoverType: .clock)
                                 .frame(width: 300, height: 100)
                                 .presentationCompactAdaptation(.popover)
                                 .scrollContentBackground(.hidden)
                                 .presentationBackground(.thinMaterial)
-                            }
-
+                        }
+                    
                     
                     // Bouton choix des animaux a afficher
-                    MapBtn(systemIcon: "fish"){ self.presentPopupFish = true }
+                    MapBouton(systemIcon: "fish"){ self.presentPopupFish = true }
                         .popover(isPresented: $presentPopupFish) {
                             PopoverView(popoverType: .fish)
                                 .presentationCompactAdaptation(.popover)
                                 .scrollContentBackground(.hidden)
                                 .presentationBackground(.thinMaterial)
-                            }
-
+                        }
+                    
                     
                     Spacer()
                 }

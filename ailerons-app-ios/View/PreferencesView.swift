@@ -15,25 +15,24 @@ struct PreferencesView: View {
         NavigationStack {
             
             Form {
-                Section("Réglagles") {
+                Section("Réglages") {
                     
-                    // Picker pour choisir preference du system de mesure
                     Picker("Unité de mesure", selection: $vmPreferences.selectedUnit) {
-                                   ForEach(UnitOfMeasurement.allCases, id: \.self) { unit in
-                                       Text(unit.rawValue)
+                        ForEach(UnitOfMeasurement.allCases, id: \.self) { unit in
+                            Text(unit.rawValue)
                         }
                     }
                 }
                 
-
-            
+                
+                
                 Section("A Propos de Ailerons") {
-                   
+                    
                     // Lien vers About de l'assos Ailerons
                     NavigationLink(destination: WebView(urlString: "https://www.asso-ailerons.fr/qui-sommes-nous/")) {
                         Text("Association Ailerons")
                     }
-
+                    
                     // Lien vers le repo Github de l'app
                     NavigationLink(destination: WebView(urlString: "https://github.com/Jezzatator/ailerons-app-ios")) {
                         VStack(alignment: .leading) {
@@ -53,15 +52,15 @@ struct PreferencesView: View {
                     .foregroundStyle(.gray)
             }
             
-
-
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            Button("Done") {
-                                dismiss()
-                            }
-                        }
+            
+            
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Done") {
+                        dismiss()
                     }
+                }
+            }
         }
         .scrollContentBackground(.hidden)
     }
