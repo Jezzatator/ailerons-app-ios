@@ -9,8 +9,9 @@ import Foundation
 
 struct PointGeoJSONRequest: SupabaseAPIRequestProtocol {
     typealias Response = [PointGeoJSON]
-
+    
     var tableName: String {
         return "point_geojson"
     }
 }
+// Créez une structure représentant la requête pour récupérer les pointsGeoJSON de Supabase

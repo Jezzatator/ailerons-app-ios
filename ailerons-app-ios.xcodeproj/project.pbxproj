@@ -10,7 +10,6 @@
 		861639F42B554175007FCFFC /* MapViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861639F32B554175007FCFFC /* MapViewWrapper.swift */; };
 		861639F72B55454C007FCFFC /* MapBouton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861639F62B55454C007FCFFC /* MapBouton.swift */; };
 		861639F92B567EE7007FCFFC /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861639F82B567EE7007FCFFC /* PreferencesView.swift */; };
-		861639FB2B568CAF007FCFFC /* SupabaseAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861639FA2B568CAF007FCFFC /* SupabaseAPIClient.swift */; };
 		86179B532B596D0A00C5A228 /* PreferencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86179B522B596D0A00C5A228 /* PreferencesViewModel.swift */; };
 		86179BAF2B5EAEB500C5A228 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86179BAE2B5EAEB500C5A228 /* WebView.swift */; };
 		86179BB22B5EC56F00C5A228 /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86179BB12B5EC56F00C5A228 /* PopoverView.swift */; };
@@ -26,6 +25,11 @@
 		862F4E542B569749004980DF /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 862F4E532B569749004980DF /* Storage */; };
 		862F4E572B5697C8004980DF /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 862F4E562B5697C8004980DF /* Supabase */; };
 		862F4E592B569B1D004980DF /* SpeciesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862F4E582B569B1D004980DF /* SpeciesView.swift */; };
+		8636B1602B67FFF6002F0CD2 /* SupabaseAPIRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636B15B2B67FFF6002F0CD2 /* SupabaseAPIRequestProtocol.swift */; };
+		8636B1612B67FFF6002F0CD2 /* SupbaseAPIClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636B15C2B67FFF6002F0CD2 /* SupbaseAPIClientProtocol.swift */; };
+		8636B1622B67FFF6002F0CD2 /* SupabaseAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636B15D2B67FFF6002F0CD2 /* SupabaseAPIClient.swift */; };
+		8636B1632B67FFF6002F0CD2 /* PointGeoJSONRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636B15E2B67FFF6002F0CD2 /* PointGeoJSONRequest.swift */; };
+		8636B1642B67FFF6002F0CD2 /* IndividualRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636B15F2B67FFF6002F0CD2 /* IndividualRequest.swift */; };
 		8654B5652B63BC2A00F15627 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654B5642B63BC2A00F15627 /* ListView.swift */; };
 		8654B5672B63BE0200F15627 /* FavouritesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654B5662B63BE0200F15627 /* FavouritesListView.swift */; };
 		86A9F61C2B56B47200CE5E35 /* SpicieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A9F61B2B56B47200CE5E35 /* SpicieRow.swift */; };
@@ -44,10 +48,6 @@
 		86DF7E5E2B2C8A5E00F61E51 /* ailerons_app_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF7E5D2B2C8A5E00F61E51 /* ailerons_app_iosUITests.swift */; };
 		86DF7E602B2C8A5E00F61E51 /* ailerons_app_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF7E5F2B2C8A5E00F61E51 /* ailerons_app_iosUITestsLaunchTests.swift */; };
 		86F43CC52B67B44F0093114E /* SpeciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F43CC42B67B44F0093114E /* SpeciesViewModel.swift */; };
-		86F43CC72B67B64C0093114E /* IndividualRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F43CC62B67B64C0093114E /* IndividualRequest.swift */; };
-		86F43CCA2B67DCEC0093114E /* PointGeoJSONRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F43CC92B67DCEC0093114E /* PointGeoJSONRequest.swift */; };
-		86F43CCC2B67E8AF0093114E /* SupbaseAPIClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F43CCB2B67E8AF0093114E /* SupbaseAPIClientProtocol.swift */; };
-		86F43CCE2B67E8F00093114E /* SupabaseAPIRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F43CCD2B67E8F00093114E /* SupabaseAPIRequestProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +71,6 @@
 		861639F32B554175007FCFFC /* MapViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewWrapper.swift; sourceTree = "<group>"; };
 		861639F62B55454C007FCFFC /* MapBouton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBouton.swift; sourceTree = "<group>"; };
 		861639F82B567EE7007FCFFC /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
-		861639FA2B568CAF007FCFFC /* SupabaseAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseAPIClient.swift; sourceTree = "<group>"; };
 		86179B522B596D0A00C5A228 /* PreferencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewModel.swift; sourceTree = "<group>"; };
 		86179BAE2B5EAEB500C5A228 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		86179BB02B5EB29E00C5A228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +81,11 @@
 		862982B12B2CA0AB0000C34F /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
 		862982C32B2CABC60000C34F /* FormCompositionalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCompositionalLayout.swift; sourceTree = "<group>"; };
 		862F4E582B569B1D004980DF /* SpeciesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesView.swift; sourceTree = "<group>"; };
+		8636B15B2B67FFF6002F0CD2 /* SupabaseAPIRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupabaseAPIRequestProtocol.swift; path = ../../../SupbaseAPINetworking/Sources/SupbaseAPINetworking/SupabaseAPIRequestProtocol.swift; sourceTree = "<group>"; };
+		8636B15C2B67FFF6002F0CD2 /* SupbaseAPIClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupbaseAPIClientProtocol.swift; path = ../../../SupbaseAPINetworking/Sources/SupbaseAPINetworking/SupbaseAPIClientProtocol.swift; sourceTree = "<group>"; };
+		8636B15D2B67FFF6002F0CD2 /* SupabaseAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupabaseAPIClient.swift; path = ../../../SupbaseAPINetworking/Sources/SupbaseAPINetworking/SupabaseAPIClient.swift; sourceTree = "<group>"; };
+		8636B15E2B67FFF6002F0CD2 /* PointGeoJSONRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointGeoJSONRequest.swift; path = ../../../SupbaseAPINetworking/Sources/SupbaseAPINetworking/PointGeoJSONRequest.swift; sourceTree = "<group>"; };
+		8636B15F2B67FFF6002F0CD2 /* IndividualRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndividualRequest.swift; path = ../../../SupbaseAPINetworking/Sources/SupbaseAPINetworking/IndividualRequest.swift; sourceTree = "<group>"; };
 		8654B5642B63BC2A00F15627 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		8654B5662B63BE0200F15627 /* FavouritesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesListView.swift; sourceTree = "<group>"; };
 		86A9F61B2B56B47200CE5E35 /* SpicieRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpicieRow.swift; sourceTree = "<group>"; };
@@ -103,10 +107,6 @@
 		86DF7E5D2B2C8A5E00F61E51 /* ailerons_app_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ailerons_app_iosUITests.swift; sourceTree = "<group>"; };
 		86DF7E5F2B2C8A5E00F61E51 /* ailerons_app_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ailerons_app_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		86F43CC42B67B44F0093114E /* SpeciesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesViewModel.swift; sourceTree = "<group>"; };
-		86F43CC62B67B64C0093114E /* IndividualRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualRequest.swift; sourceTree = "<group>"; };
-		86F43CC92B67DCEC0093114E /* PointGeoJSONRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointGeoJSONRequest.swift; sourceTree = "<group>"; };
-		86F43CCB2B67E8AF0093114E /* SupbaseAPIClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupbaseAPIClientProtocol.swift; sourceTree = "<group>"; };
-		86F43CCD2B67E8F00093114E /* SupabaseAPIRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseAPIRequestProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,11 +199,11 @@
 			isa = PBXGroup;
 			children = (
 				86C081232B51794500908121 /* MovebankFetch.swift */,
-				861639FA2B568CAF007FCFFC /* SupabaseAPIClient.swift */,
-				86F43CC62B67B64C0093114E /* IndividualRequest.swift */,
-				86F43CC92B67DCEC0093114E /* PointGeoJSONRequest.swift */,
-				86F43CCB2B67E8AF0093114E /* SupbaseAPIClientProtocol.swift */,
-				86F43CCD2B67E8F00093114E /* SupabaseAPIRequestProtocol.swift */,
+				8636B15F2B67FFF6002F0CD2 /* IndividualRequest.swift */,
+				8636B15E2B67FFF6002F0CD2 /* PointGeoJSONRequest.swift */,
+				8636B15D2B67FFF6002F0CD2 /* SupabaseAPIClient.swift */,
+				8636B15B2B67FFF6002F0CD2 /* SupabaseAPIRequestProtocol.swift */,
+				8636B15C2B67FFF6002F0CD2 /* SupbaseAPIClientProtocol.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -454,8 +454,9 @@
 				86DF7E452B2C8A5B00F61E51 /* ContentView.swift in Sources */,
 				86179BBB2B6153FD00C5A228 /* DetailMapViewController.swift in Sources */,
 				86179BB42B5FC13000C5A228 /* AileronsMapViewController.swift in Sources */,
-				861639FB2B568CAF007FCFFC /* SupabaseAPIClient.swift in Sources */,
 				86A9F61E2B56BE8300CE5E35 /* IndividualsSupa.swift in Sources */,
+				8636B1632B67FFF6002F0CD2 /* PointGeoJSONRequest.swift in Sources */,
+				8636B1622B67FFF6002F0CD2 /* SupabaseAPIClient.swift in Sources */,
 				862F4E592B569B1D004980DF /* SpeciesView.swift in Sources */,
 				86C081282B517A5800908121 /* IndividualsFormatted.swift in Sources */,
 				86179BAF2B5EAEB500C5A228 /* WebView.swift in Sources */,
@@ -465,18 +466,17 @@
 				86179BB92B600A5800C5A228 /* ProtocolAileronsMap.swift in Sources */,
 				86A9F61C2B56B47200CE5E35 /* SpicieRow.swift in Sources */,
 				861639F92B567EE7007FCFFC /* PreferencesView.swift in Sources */,
+				8636B1642B67FFF6002F0CD2 /* IndividualRequest.swift in Sources */,
 				86DF7E432B2C8A5B00F61E51 /* AileronsApp.swift in Sources */,
 				86C081242B51794500908121 /* MovebankFetch.swift in Sources */,
 				86C081222B5172A400908121 /* MapViewControllerRepresentable.swift in Sources */,
-				86F43CCC2B67E8AF0093114E /* SupbaseAPIClientProtocol.swift in Sources */,
 				861639F72B55454C007FCFFC /* MapBouton.swift in Sources */,
-				86F43CC72B67B64C0093114E /* IndividualRequest.swift in Sources */,
 				8654B5672B63BE0200F15627 /* FavouritesListView.swift in Sources */,
 				862982B22B2CA0AB0000C34F /* FormModel.swift in Sources */,
-				86F43CCA2B67DCEC0093114E /* PointGeoJSONRequest.swift in Sources */,
+				8636B1602B67FFF6002F0CD2 /* SupabaseAPIRequestProtocol.swift in Sources */,
 				86A9F6212B56C77100CE5E35 /* SpecieDetailView.swift in Sources */,
+				8636B1612B67FFF6002F0CD2 /* SupbaseAPIClientProtocol.swift in Sources */,
 				86C0811F2B5171D600908121 /* MapViewController.swift in Sources */,
-				86F43CCE2B67E8F00093114E /* SupabaseAPIRequestProtocol.swift in Sources */,
 				86F43CC52B67B44F0093114E /* SpeciesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
