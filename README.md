@@ -33,10 +33,6 @@ Ailerons App iOS est une application mobile collaborative développée en collab
 - [LouisCoutel](https://github.com/LouisCoutel) - Développeur Backend
 - [Onat Rigault](https://github.com/onatyr) - Développeur Android
 
-## Licence
-
-Ce projet est sous licence [NOM DE LA LICENCE] - consultez le fichier [LICENSE.md](LICENSE.md) pour plus de détails.
-
 ## Remerciements
 
-Nous tenons à exprimer notre gratitude à l'association Ailerons pour leur collaboration et leur soutien tout au long du processus de développement. Un merci spécial à [Nom du Mentor] pour avoir fourni conseils et mentorat.
+Nous tenons à exprimer notre gratitude à l'association Ailerons pour leur collaboration et leur soutien tout au long du processus de développement. Un merci spécial à Ada Tech School pour avoir fourni conseils et mentorats.
