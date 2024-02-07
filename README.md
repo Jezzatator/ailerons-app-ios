@@ -2,7 +2,7 @@
 
 ## Aperçu
 
-Ailerons App iOS est une application mobile collaborative développée en collaboration avec l'association [Ailerons](https://www.asso-ailerons.fr/) de l'Université de Montpellier 2. Ce projet vise à fournir une solution mobile pour gérer certains aspects des activités de l'association.
+Ailerons App iOS est une application mobile collaborative développée en collaboration avec l'[association Ailerons](https://www.asso-ailerons.fr/) de l'Université de Montpellier 2. Ce projet vise à fournir une solution mobile pour gérer certains aspects des activités de l'association.
 
 ## Fonctionnalités
 
@@ -25,7 +25,7 @@ Ailerons App iOS est une application mobile collaborative développée en collab
 
 ## Captures d'Écran
 
-[Insérez ici des captures d'écran de l'application, mettant en valeur les fonctionnalités clés et l'interface utilisateur.]
+<img width="412" alt="" src="https://github.com/Jezzatator/ailerons-app-ios/assets/84284069/c10b7c1b-492d-4401-9036-54d6ba1e0281">
 
 ## Contributeurs
 
