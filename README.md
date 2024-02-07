@@ -2,7 +2,7 @@
 
 ## Aperçu
 
-Ailerons App iOS est une application mobile collaborative développée en collaboration avec l'association "Ailerons" de l'Université de Montpellier 2. Ce projet vise à fournir une solution mobile pour gérer certains aspects des activités de l'association.
+Ailerons App iOS est une application mobile collaborative développée en collaboration avec l'association [Ailerons](https://www.asso-ailerons.fr/) de l'Université de Montpellier 2. Ce projet vise à fournir une solution mobile pour gérer certains aspects des activités de l'association.
 
 ## Fonctionnalités
 
