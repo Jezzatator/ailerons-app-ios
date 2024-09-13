@@ -9,8 +9,8 @@ import Combine
 import Foundation
 
 class MovebankFetch: ObservableObject {
-    @Published var fetchedIndividuals: [Individual] = []
-    @Published var individual: [Individual] = []
+    @Published var fetchedIndividuals: Individuals = []
+    @Published var individual: Individuals = []
 
     
     private var cancellables: Set<AnyCancellable> = []
@@ -42,7 +42,7 @@ class MovebankFetch: ObservableObject {
         let decoder = JSONDecoder()
 
         if let jsonIndividuals = try? decoder.decode(Individuals.self, from: json) {
-            fetchedIndividuals = jsonIndividuals.individuals
+            fetchedIndividuals = jsonIndividuals
             individual = Array(fetchedIndividuals.prefix(10))
         } else {
             print("Error decode JSON")

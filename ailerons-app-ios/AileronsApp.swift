@@ -11,35 +11,33 @@ import SwiftUI
 struct AileronsApp: App {
     
     @StateObject var router: TabRouter = .init()
+    @StateObject var speciesViewModel = SpeciesViewModel()
     
     var body: some Scene {
         WindowGroup {
             TabView(selection: $router.screen) {
-                //Vue Favories
-                FavouritesListView()
-                    .badge(3)
-                    .tag(Screen.fav)
+                // Vue Actualités
+                NewsView()
+                    .badge(10)
+                    .tag(Screen.news)
                     .environmentObject(router)
-                    .tabItem { Label("Favories", systemImage: "star") }
+                    .tabItem { Label("Actualités", systemImage: "newspaper") }
                 
                 // Vue Carte
                 MapViewWrapper()
                     .tag(Screen.map)
                     .environmentObject(router)
+                    .environmentObject(speciesViewModel)
                     .tabItem { Label("Carte", systemImage: "map") }
                 
                 // Vue liste animaux
                 SpeciesView()
                     .tag(Screen.individuals)
                     .environmentObject(router)
-                    .tabItem { Label("Espèces", systemImage: "book.pages") }
+                    .environmentObject(speciesViewModel)
+                    .tabItem { Label("Individus", systemImage: "book.pages") }
                 
-                // Vue Actualités
-                PreferencesView() //Mock pour tester la TabView
-                    .badge(10)
-                    .tag(Screen.reglages)
-                    .environmentObject(router)
-                    .tabItem { Label("Actualités", systemImage: "newspaper") }
+
 
             }
             .onAppear() {
@@ -48,6 +46,12 @@ struct AileronsApp: App {
                 
                 UITabBar.appearance().standardAppearance = appearance
                 UITabBar.appearance().scrollEdgeAppearance = appearance
+                
+                Task {
+                    if speciesViewModel.individuals.isEmpty {
+                        await speciesViewModel.fetchFullDataIndividuals()
+                    }
+                }
             }
         }
     }
@@ -56,7 +60,7 @@ struct AileronsApp: App {
 enum Screen {
     case map
     case reglages
-    case fav
+    case news
     case individuals
 }
 

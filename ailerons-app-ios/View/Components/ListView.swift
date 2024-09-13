@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ListView: View {
     
-    var individuals: [SupaIndiv]
+    var individuals: SupaIndiv
     var listType: ListType
     
     var body: some View {
@@ -21,7 +21,7 @@ struct ListView: View {
                 NavigationLink {
                     SpecieDetailView(individual: indiv)
                 } label: {
-                    SpicieRow(binomialName: indiv.binomialName, commonName: indiv.commonName, individualName: indiv.individualName)
+                    SpicieRow(name: indiv.individualName, sex: indiv.sex)
                 }
             }
         }

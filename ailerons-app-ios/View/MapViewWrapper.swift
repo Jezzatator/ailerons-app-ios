@@ -10,15 +10,14 @@ import MapKit
 
 struct MapViewWrapper: View {
     
-    // State pour la présentation de differents popovers et menus
     @State private var isPresented: Bool = false
     @State private var presentPopupFish: Bool = false
     @State private var presentPopupClock: Bool = false
     
-    // State pour le choix de fond de carte
     @State var mapStyle: MKMapType
     
-    // Initialisateur de MapViewWrapper
+    @EnvironmentObject var viewModel: SpeciesViewModel
+
     init(isPresented: Bool = false, presentPopupFish: Bool = false, presentPopupClock: Bool = false, mapStyle: MKMapType? = nil) {
         self._isPresented = State(initialValue: isPresented)
         self._presentPopupFish = State(initialValue: presentPopupFish)
@@ -29,16 +28,13 @@ struct MapViewWrapper: View {
     var body: some View {
         
         ZStack{
-            // Carte générale
-            MapViewControllerRepresentable(mapStyle: .constant(mapStyle))
+            MapViewControllerRepresentable(viewModel: viewModel)
                 .ignoresSafeArea(.all)
             
-            // Stacke des réglages et boutons
             HStack() {
                 
                 VStack{
                     
-                    // Bouton régalges
                     MapBouton(systemIcon: "gear") {
                         isPresented.toggle()
                     }

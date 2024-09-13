@@ -10,12 +10,8 @@ import Charts
 import MapKit
 
 struct SpecieDetailView: View {
+    let individual: SupaIndivElement
     
-    @State var mapStyle: Int = 0
-    
-    let individual: SupaIndiv
-    
-    // Données du chart a refacto (profondeurs, luminosité, etc) - à définir avec l'assos
     var data: [ToyShape] = [
         .init(type: "Cube", count: 5),
         .init(type: "Sphere", count: 4),
@@ -24,61 +20,126 @@ struct SpecieDetailView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
-                HStack {
-                    // Titre, nom scientifique, nom vernacculaire
-                    Text("\(individual.binomialName) / \(individual.commonName)")
-                        .font(.title2)
-                        .italic()
+            VStack{
+                VStack{
+                    Image("mobula_mobular_default")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: UIScreen.main.bounds.width ,height: 220)
+                        .clipped()
+                        .edgesIgnoringSafeArea(.horizontal)
                     
                 }
                 
-                HStack {
-                    // Spec de base de l'individu
-                    Text("Age: \(String(individual.age))")
-                    Text("Poid: \(String(individual.weight))")
-                    Text("Sexe: \(individual.sex)")
+                VStack(spacing: 2) {
+                    HStack(alignment: .center) {
+                        TitleText(text: individual.individualName)
+                            .multilineTextAlignment(.leading)
+                        
+                        Spacer()
+                        
+                        VStack(alignment: .trailing) {
+                            CaptionText(text: individual.commonName)
+                            CaptionText(text: individual.binomialName, isItalic: true)
+                        }
+                        .fixedSize(horizontal: false, vertical: true)
+                    }
+                    Divider()
+                        .background(Color.black)
+                }.frame(width: UIScreen.main.bounds.width - 20)
+                
+                HStack(alignment: .center) {
+                    DetailView(
+                        detailType: .sex,
+                        text: individual.sex,
+                        imageName: "gender_female"
+                    )
+                    Spacer()
+                    DetailView(
+                        detailType: .wingspan,
+                        text: "8 mètres",
+                        imageName: "ruler.fill",
+                        rotationDegrees: 45
+                    )
+                    Spacer()
+                    DetailView(
+                        detailType: .groupSituation,
+                        text: "Seul.e",
+                        imageName: "person.2.fill"
+                    )
+                }.frame(width: UIScreen.main.bounds.width - 20)
+                
+                VStack(alignment: .leading, spacing: 2) {
+                    Group {
+                        Text("Comportement*")
+                            .fontWeight(.thin)
+                        Text("Sautait hors de l’eau et jouait dans les vagues.")
+                            .multilineTextAlignment(.leading)
+                            .fontWeight(.regular)
+                    }
+                    
+                    Group {
+                        Text("Description")
+                            .fontWeight(.thin)
+                        
+                        Text("""
+                            Repérée au large du Cap Corse, il s’agit d’une femelle adulte, en parfaite santé et qui se laisse facilement approcher. \(individual.description)
+                            """)
+                        .multilineTextAlignment(.leading)
+                        .fontWeight(.regular)
+                    }
+                    
+                    Text("Parcours individuel du 21/07/2023 au 17/09/2023")
+                        .fontWeight(.thin)
                 }
-                .font(.title3)
-                .padding(.bottom)
                 
-                // Carte du tracé de ses déplacement
-                //                MapViewControllerRepresentable(mapStyle: $mapStyle, mainMap: false)
-                //                    .allowsHitTesting(false)
-                //                    .frame(height: 200)
-                //                    .padding(.bottom)
-                
-                // Chart des données à définir
-                Chart {
-                    LineMark(
-                        x: .value("Shape Type", data[0].type),
-                        y: .value("Total Count", data[0].count)
-                    )
-                    LineMark(
-                        x: .value("Shape Type", data[1].type),
-                        y: .value("Total Count", data[1].count)
-                    )
-                    LineMark(
-                        x: .value("Shape Type", data[2].type),
-                        y: .value("Total Count", data[2].count)
-                    )
+                if let polyline = createPolyline(for: individual.featureCollection) {
+                    MapSnapshotView(polylines: [polyline])
+                        .aspectRatio(1, contentMode: .fit)
+                        .frame(width: UIScreen.main.bounds.width - 20, height: 220)
+                        .cornerRadius(10)
                 }
-                .frame(height: 200)
-                .padding(.bottom)
                 
+                Text("*Au moment de la pose de balise")
+                    .font(Font.system(size: 12).italic())
+                    .fontWeight(.thin)
+                    .multilineTextAlignment(.trailing)
+                    .frame(maxWidth: UIScreen.main.bounds.width - 20, alignment: .bottomTrailing)
                 
-                // Description longue de l'individu - ajout d'image
-                Text(individual.description)
-                    .multilineTextAlignment(.leading)
-                    .padding()
                 Spacer()
-                
-            }
-            .padding(.top)
+            }.padding(.horizontal)
         }
-        .navigationTitle(individual.individualName)
+        .navigationTitle("Fiche d'identité")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+    
+    private var chartView: some View {
+        Chart {
+            ForEach(data) { shape in
+                LineMark(
+                    x: .value("Shape Type", shape.type),
+                    y: .value("Total Count", shape.count)
+                )
+            }
+        }
+        .frame(height: 200)
+        .padding(.bottom)
+    }
+    
+    private func createPolyline(for featureCollection: FeatureCollection?) -> MKPolyline? {
+        guard let coordinates = featureCollection?.features.compactMap({ $0.geometry.coordinates }) else {
+            return nil
+        }
+        
+        let polylineCoordinates = coordinates.map {
+            CLLocationCoordinate2D(latitude: $0[1], longitude: $0[0])
+        }
+        
+        return MKPolyline(coordinates: polylineCoordinates, count: polylineCoordinates.count)
     }
 }
+
+
 
 // Model du chart
 struct ToyShape: Identifiable {
@@ -87,10 +148,33 @@ struct ToyShape: Identifiable {
     var id = UUID()
 }
 
-//#Preview {
-//    SpecieDetailView(individual: SupaIndiv(id: 1, individualName: "Loulou", commonName: "Nanate", binomialName: "Jezzouille", age: 69, size: 69, weight: 1312, sex: "Fluide", totalDistance: 100000, description: """
-//Et deserunt sint amet id do in adipiscing sint laborum ut eiusmod ullamco officia fugiat veniam irure consectetur. Ut occaecat nisi pariatur occaecat ut elit incididunt deserunt ad mollit. Eiusmod officia laboris quis laborum non eu anim dolore pariatur reprehenderit eiusmod sit tempor exercitation eiusmod. Incididunt aliqua labore non consectetur aliqua lorem officia id eu ex reprehenderit sunt voluptate in exercitation occaecat consectetur sint. Et quis irure cupidatat adipiscing anim voluptate laboris enim ullamco aute. Velit ipsum nulla fugiat culpa exercitation ex adipiscing esse tempor culpa culpa irure tempor laborum.
-//Commodo laborum lorem minim nulla lorem elit duis quis nostrud quis eu in lorem cillum aliquip. Occaecat et sunt exercitation qui fugiat enim duis dolor pariatur irure sunt. Minim enim laborum commodo officia occaecat dolor ipsum ad incididunt et. Non lorem ipsum dolore in lorem mollit excepteur labore voluptate reprehenderit laborum sunt incididunt sed amet excepteur mollit. Nostrud incididunt cupidatat consequat aliquip anim labore anim est occaecat in ad minim pariatur proident et voluptate anim commodo. Exercitation exercitation lorem et lorem ullamco esse do sunt reprehenderit sint anim laborum cillum ex culpa ullamco sit cillum.
-//""", icon: 3, picture: "test.jpeg"))
-//}
-
+#Preview {
+    SpecieDetailView(individual: SupaIndivElement(
+        id: 123,
+        createdAt: "2024-01-16T12:34:56Z",
+        individualName: "Poupette",
+        commonName: "Diable de mer méditerranéen",
+        binomialName: "Mobula mobular",
+        sex: "Femelle",
+        description: """
+               Et deserunt sint amet id do in adipiscing sint laborum ut eiusmod ullamco officia fugiat veniam irure consectetur. Ut occaecat nisi pariatur occaecat ut elit incididunt deserunt ad mollit. Eiusmod officia laboris quis laborum non eu anim dolore pariatur reprehenderit eiusmod sit tempor exercitation eiusmod. Incididunt aliqua labore non consectetur aliqua lorem officia id eu ex reprehenderit sunt voluptate in exercitation occaecat consectetur sint.
+               """,
+        featureCollection: FeatureCollection(
+            type: "FeatureCollection",
+            features: [
+                Feature(
+                    type: .feature,
+                    geometry: Geometry(
+                        type: .point,
+                        coordinates: [48.8566, 2.3522] // Coordonnées fictives (Paris)
+                    ),
+                    properties: Properties(
+                        individualID: 123,
+                        individualName: "Poupette",
+                        timestamp: "2024-01-16T12:34:56Z"
+                    )
+                )
+            ]
+        )
+    ))
+}

@@ -8,23 +8,15 @@
 import SwiftUI
 
 struct SpeciesView: View {
-    @StateObject var speciesViewModel = SpeciesViewModel()
-    @State var individuals: [SupaIndiv] = []
-    
+    @EnvironmentObject var speciesViewModel: SpeciesViewModel
+
     var body: some View {
         NavigationStack {
-            ListView(individuals: individuals, listType: .all)
-        }
-        
-        .onAppear() {
-            // Verifie si les données DL et appel le fetch si besoin
-            Task {
-                await speciesViewModel.fetchFullDataIndividualsPointsGeoJSON()
-                individuals = speciesViewModel.individuals
-            }
+            ListView(individuals: speciesViewModel.individuals, listType: .all)
         }
     }
 }
+
 
 #Preview {
     SpeciesView()

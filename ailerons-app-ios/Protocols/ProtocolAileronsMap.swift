@@ -9,12 +9,23 @@ import Foundation
 import MapKit
 
 protocol AileronsMap {
-            
-    var displayedOverlays: [MKPolygon] { get set }
-    
-    func loadMapData()
+    var displayedOverlays: [MKOverlay] { get set }
+    var displayedAnnotations: [MKAnnotation] { get set }
+
+    // Configuration initiale de la carte
     func setupMap()
-    func makeMarker(data: [SupaIndiv])
-    func drawRoute(routeData: [LocationFormatted])
-    func setMapType(type: MKMapType)
+
+    // Gestion des annotations
+    func addAnnotations(_ annotations: [MKAnnotation])
+    func removeAnnotations(_ annotations: [MKAnnotation])
+
+    // Gestion des routes ou polygones
+    func addOverlays(_ overlays: [MKOverlay])
+    func removeOverlays(_ overlays: [MKOverlay])
+
+    // Ajuste le type de carte
+    func setMapType(_ type: MKMapType)
+    
+    // Ajuste la région visible sur la carte
+    func setRegion(_ region: MKCoordinateRegion, animated: Bool)
 }

@@ -8,24 +8,23 @@
 import SwiftUI
 
 struct SpicieRow: View {
-    var binomialName: String
-    var commonName: String
-    var individualName: String
+    var name: String
+    var sex: String
     
     var body: some View {
         HStack(alignment: .center) {
                 VStack(alignment: .leading) {
-                    Text(individualName)
+                    Text(name)
                         .font(.title3)
                     
                     HStack {
-                        Text(binomialName)
+                        Text(sex)
                             .font(.subheadline)
                             .tint(.gray.opacity(0.5))
                         
                         Spacer()
                         
-                        Text(commonName)
+                        Text("PIPOU")
                             .font(.subheadline)
                             .tint(.gray.opacity(0.5))
                     }
@@ -35,5 +34,5 @@ struct SpicieRow: View {
 }
 
 #Preview {
-    SpicieRow(binomialName: "NTM", commonName: "Requin", individualName: "Lol")
+    SpicieRow(name: "Requinou", sex: "non-binaire")
 }

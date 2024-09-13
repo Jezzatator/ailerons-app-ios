@@ -27,11 +27,12 @@
 		862F4E592B569B1D004980DF /* SpeciesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862F4E582B569B1D004980DF /* SpeciesView.swift */; };
 		8636B1602B67FFF6002F0CD2 /* SupabaseAPIRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636B15B2B67FFF6002F0CD2 /* SupabaseAPIRequestProtocol.swift */; };
 		8636B1612B67FFF6002F0CD2 /* SupbaseAPIClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636B15C2B67FFF6002F0CD2 /* SupbaseAPIClientProtocol.swift */; };
-		8636B1622B67FFF6002F0CD2 /* SupabaseAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636B15D2B67FFF6002F0CD2 /* SupabaseAPIClient.swift */; };
-		8636B1632B67FFF6002F0CD2 /* PointGeoJSONRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636B15E2B67FFF6002F0CD2 /* PointGeoJSONRequest.swift */; };
-		8636B1642B67FFF6002F0CD2 /* IndividualRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636B15F2B67FFF6002F0CD2 /* IndividualRequest.swift */; };
+		8636B1632B67FFF6002F0CD2 /* SupabaseAPIRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636B15E2B67FFF6002F0CD2 /* SupabaseAPIRequests.swift */; };
+		8636B1682B6901A5002F0CD2 /* SupabaseAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636B1672B6901A5002F0CD2 /* SupabaseAPIRouter.swift */; };
+		8636B16A2B690431002F0CD2 /* SupabaseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636B1692B690431002F0CD2 /* SupabaseAPIService.swift */; };
 		8654B5652B63BC2A00F15627 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654B5642B63BC2A00F15627 /* ListView.swift */; };
 		8654B5672B63BE0200F15627 /* FavouritesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654B5662B63BE0200F15627 /* FavouritesListView.swift */; };
+		8693BD5E2BB6FE43001393AC /* AileronsAboutHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8693BD5D2BB6FE43001393AC /* AileronsAboutHome.swift */; };
 		86A9F61C2B56B47200CE5E35 /* SpicieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A9F61B2B56B47200CE5E35 /* SpicieRow.swift */; };
 		86A9F61E2B56BE8300CE5E35 /* IndividualsSupa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A9F61D2B56BE8300CE5E35 /* IndividualsSupa.swift */; };
 		86A9F6212B56C77100CE5E35 /* SpecieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A9F6202B56C77100CE5E35 /* SpecieDetailView.swift */; };
@@ -47,7 +48,13 @@
 		86DF7E542B2C8A5E00F61E51 /* ailerons_app_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF7E532B2C8A5E00F61E51 /* ailerons_app_iosTests.swift */; };
 		86DF7E5E2B2C8A5E00F61E51 /* ailerons_app_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF7E5D2B2C8A5E00F61E51 /* ailerons_app_iosUITests.swift */; };
 		86DF7E602B2C8A5E00F61E51 /* ailerons_app_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF7E5F2B2C8A5E00F61E51 /* ailerons_app_iosUITestsLaunchTests.swift */; };
+		86EC470E2C78CB0D00F253F3 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC470D2C78CB0D00F253F3 /* DetailView.swift */; };
 		86F43CC52B67B44F0093114E /* SpeciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F43CC42B67B44F0093114E /* SpeciesViewModel.swift */; };
+		86FF38432C8B003D009E00F3 /* TitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FF38422C8B003D009E00F3 /* TitleText.swift */; };
+		86FF38452C8B018F009E00F3 /* CaptionText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FF38442C8B018F009E00F3 /* CaptionText.swift */; };
+		86FF38472C909F4A009E00F3 /* MapSnapshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FF38462C909F4A009E00F3 /* MapSnapshotView.swift */; };
+		86FF38492C91FEC4009E00F3 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FF38482C91FEC4009E00F3 /* NewsView.swift */; };
+		86FF384C2C91FF1D009E00F3 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FF384B2C91FF1D009E00F3 /* ArticleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,11 +90,12 @@
 		862F4E582B569B1D004980DF /* SpeciesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesView.swift; sourceTree = "<group>"; };
 		8636B15B2B67FFF6002F0CD2 /* SupabaseAPIRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupabaseAPIRequestProtocol.swift; path = ../../../SupbaseAPINetworking/Sources/SupbaseAPINetworking/SupabaseAPIRequestProtocol.swift; sourceTree = "<group>"; };
 		8636B15C2B67FFF6002F0CD2 /* SupbaseAPIClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupbaseAPIClientProtocol.swift; path = ../../../SupbaseAPINetworking/Sources/SupbaseAPINetworking/SupbaseAPIClientProtocol.swift; sourceTree = "<group>"; };
-		8636B15D2B67FFF6002F0CD2 /* SupabaseAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupabaseAPIClient.swift; path = ../../../SupbaseAPINetworking/Sources/SupbaseAPINetworking/SupabaseAPIClient.swift; sourceTree = "<group>"; };
-		8636B15E2B67FFF6002F0CD2 /* PointGeoJSONRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointGeoJSONRequest.swift; path = ../../../SupbaseAPINetworking/Sources/SupbaseAPINetworking/PointGeoJSONRequest.swift; sourceTree = "<group>"; };
-		8636B15F2B67FFF6002F0CD2 /* IndividualRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndividualRequest.swift; path = ../../../SupbaseAPINetworking/Sources/SupbaseAPINetworking/IndividualRequest.swift; sourceTree = "<group>"; };
+		8636B15E2B67FFF6002F0CD2 /* SupabaseAPIRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupabaseAPIRequests.swift; path = ../../../SupbaseAPINetworking/Sources/SupbaseAPINetworking/SupabaseAPIRequests.swift; sourceTree = "<group>"; };
+		8636B1672B6901A5002F0CD2 /* SupabaseAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseAPIRouter.swift; sourceTree = "<group>"; };
+		8636B1692B690431002F0CD2 /* SupabaseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseAPIService.swift; sourceTree = "<group>"; };
 		8654B5642B63BC2A00F15627 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		8654B5662B63BE0200F15627 /* FavouritesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesListView.swift; sourceTree = "<group>"; };
+		8693BD5D2BB6FE43001393AC /* AileronsAboutHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AileronsAboutHome.swift; sourceTree = "<group>"; };
 		86A9F61B2B56B47200CE5E35 /* SpicieRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpicieRow.swift; sourceTree = "<group>"; };
 		86A9F61D2B56BE8300CE5E35 /* IndividualsSupa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualsSupa.swift; sourceTree = "<group>"; };
 		86A9F6202B56C77100CE5E35 /* SpecieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecieDetailView.swift; sourceTree = "<group>"; };
@@ -106,7 +114,13 @@
 		86DF7E592B2C8A5E00F61E51 /* ailerons-app-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ailerons-app-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86DF7E5D2B2C8A5E00F61E51 /* ailerons_app_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ailerons_app_iosUITests.swift; sourceTree = "<group>"; };
 		86DF7E5F2B2C8A5E00F61E51 /* ailerons_app_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ailerons_app_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		86EC470D2C78CB0D00F253F3 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		86F43CC42B67B44F0093114E /* SpeciesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesViewModel.swift; sourceTree = "<group>"; };
+		86FF38422C8B003D009E00F3 /* TitleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleText.swift; sourceTree = "<group>"; };
+		86FF38442C8B018F009E00F3 /* CaptionText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionText.swift; sourceTree = "<group>"; };
+		86FF38462C909F4A009E00F3 /* MapSnapshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSnapshotView.swift; sourceTree = "<group>"; };
+		86FF38482C91FEC4009E00F3 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		86FF384B2C91FF1D009E00F3 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,11 +157,13 @@
 		861639F52B55453B007FCFFC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				86FF38412C8B0026009E00F3 /* Text */,
 				861639F62B55454C007FCFFC /* MapBouton.swift */,
 				86A9F61B2B56B47200CE5E35 /* SpicieRow.swift */,
 				86179BAE2B5EAEB500C5A228 /* WebView.swift */,
 				86179BB12B5EC56F00C5A228 /* PopoverView.swift */,
 				8654B5642B63BC2A00F15627 /* ListView.swift */,
+				86EC470D2C78CB0D00F253F3 /* DetailView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -163,6 +179,7 @@
 		862982A92B2C8FBF0000C34F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				86FF384A2C91FF00009E00F3 /* News */,
 				86A9F61F2B56C75500CE5E35 /* Species */,
 				861639F52B55453B007FCFFC /* Components */,
 				862982C22B2CABA80000C34F /* Layout */,
@@ -170,6 +187,7 @@
 				861639F32B554175007FCFFC /* MapViewWrapper.swift */,
 				861639F82B567EE7007FCFFC /* PreferencesView.swift */,
 				8654B5662B63BE0200F15627 /* FavouritesListView.swift */,
+				8693BD5D2BB6FE43001393AC /* AileronsAboutHome.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -199,11 +217,11 @@
 			isa = PBXGroup;
 			children = (
 				86C081232B51794500908121 /* MovebankFetch.swift */,
-				8636B15F2B67FFF6002F0CD2 /* IndividualRequest.swift */,
-				8636B15E2B67FFF6002F0CD2 /* PointGeoJSONRequest.swift */,
-				8636B15D2B67FFF6002F0CD2 /* SupabaseAPIClient.swift */,
+				8636B15E2B67FFF6002F0CD2 /* SupabaseAPIRequests.swift */,
 				8636B15B2B67FFF6002F0CD2 /* SupabaseAPIRequestProtocol.swift */,
 				8636B15C2B67FFF6002F0CD2 /* SupbaseAPIClientProtocol.swift */,
+				8636B1672B6901A5002F0CD2 /* SupabaseAPIRouter.swift */,
+				8636B1692B690431002F0CD2 /* SupabaseAPIService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -239,6 +257,7 @@
 				86C081212B5172A400908121 /* MapViewControllerRepresentable.swift */,
 				86179BB32B5FC13000C5A228 /* AileronsMapViewController.swift */,
 				86179BBA2B6153FD00C5A228 /* DetailMapViewController.swift */,
+				86FF38462C909F4A009E00F3 /* MapSnapshotView.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -303,6 +322,24 @@
 				86DF7E5F2B2C8A5E00F61E51 /* ailerons_app_iosUITestsLaunchTests.swift */,
 			);
 			path = "ailerons-app-iosUITests";
+			sourceTree = "<group>";
+		};
+		86FF38412C8B0026009E00F3 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				86FF38422C8B003D009E00F3 /* TitleText.swift */,
+				86FF38442C8B018F009E00F3 /* CaptionText.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		86FF384A2C91FF00009E00F3 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				86FF38482C91FEC4009E00F3 /* NewsView.swift */,
+				86FF384B2C91FF1D009E00F3 /* ArticleView.swift */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,13 +487,17 @@
 			files = (
 				862982C42B2CABC60000C34F /* FormCompositionalLayout.swift in Sources */,
 				86C081262B517A2B00908121 /* Individuals.swift in Sources */,
+				86FF38492C91FEC4009E00F3 /* NewsView.swift in Sources */,
+				8636B1682B6901A5002F0CD2 /* SupabaseAPIRouter.swift in Sources */,
 				86179BB22B5EC56F00C5A228 /* PopoverView.swift in Sources */,
+				86FF38432C8B003D009E00F3 /* TitleText.swift in Sources */,
+				86FF384C2C91FF1D009E00F3 /* ArticleView.swift in Sources */,
 				86DF7E452B2C8A5B00F61E51 /* ContentView.swift in Sources */,
 				86179BBB2B6153FD00C5A228 /* DetailMapViewController.swift in Sources */,
 				86179BB42B5FC13000C5A228 /* AileronsMapViewController.swift in Sources */,
 				86A9F61E2B56BE8300CE5E35 /* IndividualsSupa.swift in Sources */,
-				8636B1632B67FFF6002F0CD2 /* PointGeoJSONRequest.swift in Sources */,
-				8636B1622B67FFF6002F0CD2 /* SupabaseAPIClient.swift in Sources */,
+				8636B1632B67FFF6002F0CD2 /* SupabaseAPIRequests.swift in Sources */,
+				86FF38472C909F4A009E00F3 /* MapSnapshotView.swift in Sources */,
 				862F4E592B569B1D004980DF /* SpeciesView.swift in Sources */,
 				86C081282B517A5800908121 /* IndividualsFormatted.swift in Sources */,
 				86179BAF2B5EAEB500C5A228 /* WebView.swift in Sources */,
@@ -465,16 +506,19 @@
 				861639F42B554175007FCFFC /* MapViewWrapper.swift in Sources */,
 				86179BB92B600A5800C5A228 /* ProtocolAileronsMap.swift in Sources */,
 				86A9F61C2B56B47200CE5E35 /* SpicieRow.swift in Sources */,
+				8636B16A2B690431002F0CD2 /* SupabaseAPIService.swift in Sources */,
 				861639F92B567EE7007FCFFC /* PreferencesView.swift in Sources */,
-				8636B1642B67FFF6002F0CD2 /* IndividualRequest.swift in Sources */,
 				86DF7E432B2C8A5B00F61E51 /* AileronsApp.swift in Sources */,
 				86C081242B51794500908121 /* MovebankFetch.swift in Sources */,
 				86C081222B5172A400908121 /* MapViewControllerRepresentable.swift in Sources */,
 				861639F72B55454C007FCFFC /* MapBouton.swift in Sources */,
 				8654B5672B63BE0200F15627 /* FavouritesListView.swift in Sources */,
 				862982B22B2CA0AB0000C34F /* FormModel.swift in Sources */,
+				86EC470E2C78CB0D00F253F3 /* DetailView.swift in Sources */,
+				86FF38452C8B018F009E00F3 /* CaptionText.swift in Sources */,
 				8636B1602B67FFF6002F0CD2 /* SupabaseAPIRequestProtocol.swift in Sources */,
 				86A9F6212B56C77100CE5E35 /* SpecieDetailView.swift in Sources */,
+				8693BD5E2BB6FE43001393AC /* AileronsAboutHome.swift in Sources */,
 				8636B1612B67FFF6002F0CD2 /* SupbaseAPIClientProtocol.swift in Sources */,
 				86C0811F2B5171D600908121 /* MapViewController.swift in Sources */,
 				86F43CC52B67B44F0093114E /* SpeciesViewModel.swift in Sources */,
@@ -566,7 +610,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -623,7 +667,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

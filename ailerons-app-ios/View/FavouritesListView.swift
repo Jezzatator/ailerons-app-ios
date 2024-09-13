@@ -14,13 +14,12 @@ protocol FavouritesListViewModelProviding {
 }
 
 struct FavouritesListView: View {
-//    @StateObject var supabaseVM = SupbaseAPIClientProtocol()
+    //@ObservedObject var supabaseVM = SupbaseAPIClientProtocol()
     
-    @State var indivs: [SupaIndiv] = []
+    @State var indivs: SupaIndiv = []
     
     var body: some View {
         NavigationStack {
-            
             ListView(individuals: indivs, listType: .fav)
         }
         .onAppear() {
