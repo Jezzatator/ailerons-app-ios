@@ -11,20 +11,25 @@ import Combine
 
 struct MapViewControllerRepresentable: UIViewRepresentable {
     @ObservedObject var viewModel: SpeciesViewModel
+    var mapStyle: MKMapType
     private var cancellables = Set<AnyCancellable>()
     
-    public init(viewModel: SpeciesViewModel, cancellables: Set<AnyCancellable> = Set<AnyCancellable>()) {
+    public init(viewModel: SpeciesViewModel, mapStyle: MKMapType = .standard, cancellables: Set<AnyCancellable> = Set<AnyCancellable>()) {
         self.viewModel = viewModel
+        self.mapStyle = mapStyle
         self.cancellables = cancellables
     }
 
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
         mapView.delegate = context.coordinator
+        mapView.mapType = mapStyle
         return mapView
     }
 
     func updateUIView(_ uiView: MKMapView, context: Context) {
+        uiView.mapType = mapStyle
+        
         uiView.removeAnnotations(uiView.annotations)
         uiView.removeOverlays(uiView.overlays)
         

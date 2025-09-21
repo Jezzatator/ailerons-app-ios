@@ -28,7 +28,7 @@ struct MapViewWrapper: View {
     var body: some View {
         
         ZStack{
-            MapViewControllerRepresentable(viewModel: viewModel)
+            MapViewControllerRepresentable(viewModel: viewModel, mapStyle: mapStyle)
                 .ignoresSafeArea(.all)
             
             HStack() {
