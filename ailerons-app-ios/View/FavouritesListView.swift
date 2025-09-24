@@ -8,7 +8,7 @@
 import SwiftUI
 
 protocol FavouritesListViewModelProviding {
-    var apiClient: SupbaseAPIClientProtocol { get }
+//    var apiClient: /*SupbaseAPIClientProtocol*/ { get }
     func fetchInfividuals() async
     
 }
@@ -16,7 +16,7 @@ protocol FavouritesListViewModelProviding {
 struct FavouritesListView: View {
     //@ObservedObject var supabaseVM = SupbaseAPIClientProtocol()
     
-    @State var indivs: SupaIndiv = []
+    @State var indivs: [SupaIndivElement] = []
     
     var body: some View {
         NavigationStack {

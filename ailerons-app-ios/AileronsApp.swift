@@ -11,42 +11,47 @@ import SwiftUI
 struct AileronsApp: App {
     
     @StateObject var router: TabRouter = .init()
-    @StateObject var speciesViewModel = SpeciesViewModel()
+    @StateObject var speciesViewModel = SpeciesViewModel(dataService: DataService(configuration: SupabaseConfiguration()))
     
     var body: some Scene {
         WindowGroup {
             TabView(selection: $router.screen) {
-                // Vue Actualités
-                NewsView()
+                TabSection {
+                    // Vue Actualités
+                    Tab("Actualités", systemImage: "newspaper", value: Screen.news) {
+                        NewsView()
+                            .environmentObject(router)
+                    }
                     .badge(10)
-                    .tag(Screen.news)
-                    .environmentObject(router)
-                    .tabItem { Label("Actualités", systemImage: "newspaper") }
-                
-                // Vue Carte
-                MapViewWrapper()
-                    .tag(Screen.map)
-                    .environmentObject(router)
-                    .environmentObject(speciesViewModel)
-                    .tabItem { Label("Carte", systemImage: "map") }
-                
-                // Vue liste animaux
-                SpeciesView()
-                    .tag(Screen.individuals)
-                    .environmentObject(router)
-                    .environmentObject(speciesViewModel)
-                    .tabItem { Label("Individus", systemImage: "book.pages") }
-                
 
-
+                    
+                    // Vue Carte
+                    Tab("Carte", systemImage: "map", value: Screen.map) {
+                        MapView()
+                            .environmentObject(router)
+                            .environmentObject(speciesViewModel)
+                    }
+                    
+                    // Vue Actualités
+                    Tab("Individu", systemImage: "fish", value: Screen.individuals) {
+                        NewsView()
+                            .environmentObject(router)
+                    }
+                    .badge(10)
+                }
+                
+                TabSection {
+                    // About View
+                    Tab("À propos", systemImage: "info.circle", value: Screen.about, role: .search) {
+                        Text("About")
+                            .environmentObject(router)
+                            .environmentObject(speciesViewModel)
+                    }
+                }
             }
+            .tabViewStyle(.sidebarAdaptable)
+            .tabBarMinimizeBehavior(.onScrollDown)
             .onAppear() {
-                let appearance = UITabBarAppearance()
-                appearance.backgroundEffect = UIBlurEffect(style: .systemThinMaterial)
-                
-                UITabBar.appearance().standardAppearance = appearance
-                UITabBar.appearance().scrollEdgeAppearance = appearance
-                
                 Task {
                     if speciesViewModel.individuals.isEmpty {
                         await speciesViewModel.fetchFullDataIndividuals()
@@ -62,6 +67,7 @@ enum Screen {
     case reglages
     case news
     case individuals
+    case about
 }
 
 final class TabRouter: ObservableObject {

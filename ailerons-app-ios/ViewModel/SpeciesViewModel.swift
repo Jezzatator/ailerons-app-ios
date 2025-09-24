@@ -1,51 +1,58 @@
 //
-//  SpeciesViewModel.swift
-//  ailerons-app-ios
+// SpeciesViewModel.swift
+// ailerons-app-ios
 //
-//  Created by Jérémie - Ada on 29/01/2024.
+// Created by Jérémie - Ada on 29/01/2024.
 //
 
 import Foundation
 import Combine
 import MapKit
+import SwiftUI
 
-class SpeciesViewModel: ObservableObject {
-    @Published var individuals: SupaIndiv = []
-    let supabaseAPIClient = SupabaseAPIService()
-    private var cancellables = Set<AnyCancellable>()
-
+@MainActor
+final class SpeciesViewModel: ObservableObject, @unchecked Sendable {
+    @Published var individuals: [SupaIndivElement] = []
+    @Published var annotations: [MKPointAnnotation] = []
+    @Published var polylines: [CustomPolyline] = []  // ← Même changement ici
+    @Published var isLoading = false
+    @Published var error: Error?
+    
+    private let dataService: DataService
+    
+    init(dataService: DataService) {
+        self.dataService = dataService
+    }
+    
     func fetchFullDataIndividuals() async {
-        do {
-            try await fetchIndividuals()
-            print("Individuals fetched: \(self.individuals)")
-            await MainActor.run {
-                // Utilisez updateMapWithGeoJSON uniquement si nécessaire
-                // self.updateMapWithGeoJSON() // Cette ligne est à supprimer si non utilisée
-            }
-        } catch {
-            print("Error fetching individuals: \(error)")
-        }
-    }
-    
-    func fetchIndividuals() async throws {
-        let individualRequest = IndividualRequest()
-        let routerType = SupabaseAPIRouter.individual
+        isLoading = true
+        error = nil
         
-        try await supabaseAPIClient.fetch(individualRequest, router: routerType) { [weak self] result in
-            switch result {
-            case .success(let fetchedIndividuals):
-                print("Fetched individuals: \(fetchedIndividuals)")
-                self?.individuals = fetchedIndividuals
-            case .failure(let error):
-                print("Erreur lors de la récupération des individus : \(error)")
-            }
+        do {
+            let fetchedIndividuals = try await dataService.fetchIndividuals()
+            await updateUI(with: fetchedIndividuals)
+        } catch {
+            await handleError(error)
         }
+        
+        isLoading = false
     }
     
-    func extractGeoJSONFeatures() -> [MKPointAnnotation] {
+    private func updateUI(with individuals: [SupaIndivElement]) async {
+        self.individuals = individuals
+        self.annotations = extractGeoJSONFeatures(from: individuals)
+        // Vous pouvez ajouter la logique pour créer des polylines ici si nécessaire
+    }
+    
+    private func handleError(_ error: Error) async {
+        self.error = error
+        print("Error fetching individuals: \(error)")
+    }
+    
+    public func extractGeoJSONFeatures(from individuals: [SupaIndivElement]) -> [MKPointAnnotation] {
         var annotations: [MKPointAnnotation] = []
         print("extractGeoJSONFeatures called")
-        print("Individuals count: \(individuals.count)") // Vérifier le nombre d'individus
+        print("Individuals count: \(individuals.count)")
         
         if individuals.isEmpty {
             print("Individuals is empty")
@@ -54,12 +61,9 @@ class SpeciesViewModel: ObservableObject {
         
         for individual in individuals {
             print("Processing individual: \(individual)")
-            
             if let features = individual.featureCollection?.features {
-                
                 for feature in features {
                     print("Processing feature: \(feature)")
-                    
                     guard feature.geometry.coordinates.count == 2 else {
                         print("Invalid coordinates count for feature: \(feature)")
                         continue
@@ -70,12 +74,10 @@ class SpeciesViewModel: ObservableObject {
                     
                     if lat.isFinite && lon.isFinite {
                         print("Creating annotation with lat: \(lat), lon: \(lon)")
-                        
                         let annotation = MKPointAnnotation()
                         annotation.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
                         annotation.title = individual.commonName
                         annotations.append(annotation)
-                        
                         print("Annotation created: \(annotation)")
                     } else {
                         print("Invalid latitude or longitude for feature: \(feature)")
@@ -88,5 +90,22 @@ class SpeciesViewModel: ObservableObject {
         
         print("Annotations created: \(annotations)")
         return annotations
+    }
+}
+
+// Extension pour les wrappers Map
+extension SpeciesViewModel {
+    // Convertit les MKPointAnnotation en MapAnnotation pour ForEach
+    var annotationsForMap: [MapAnnotation] {
+        return annotations.map { annotation in
+            MapAnnotation(from: annotation)
+        }
+    }
+    
+    // Convertit les polylines pour ForEach avec Identifiable
+    var polylinesForMap: [IdentifiableMapPolyline] {
+        return polylines.map { polyline in
+            IdentifiableMapPolyline(coordinates: polyline.coordinates)
+        }
     }
 }

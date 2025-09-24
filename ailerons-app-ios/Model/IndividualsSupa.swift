@@ -72,5 +72,3 @@ struct Properties: Codable {
 enum FeatureType: String, Codable {
     case feature = "Feature"
 }
-
-typealias SupaIndiv = [SupaIndivElement]

@@ -1,95 +1,95 @@
+////
+////  MapViewWrapper.swift
+////  ailerons-app-ios
+////
+////  Created by Jérémie - Ada on 15/01/2024.
+////
 //
-//  MapViewWrapper.swift
-//  ailerons-app-ios
+//import SwiftUI
+//import MapKit
 //
-//  Created by Jérémie - Ada on 15/01/2024.
+//struct MapViewWrapper: View {
+//    
+//    @State private var isPresented: Bool = false
+//    @State private var presentPopupFish: Bool = false
+//    @State private var presentPopupClock: Bool = false
+//    
+//    @State var mapStyle: MKMapType
+//    
+//    @EnvironmentObject var viewModel: SpeciesViewModel
 //
-
-import SwiftUI
-import MapKit
-
-struct MapViewWrapper: View {
-    
-    @State private var isPresented: Bool = false
-    @State private var presentPopupFish: Bool = false
-    @State private var presentPopupClock: Bool = false
-    
-    @State var mapStyle: MKMapType
-    
-    @EnvironmentObject var viewModel: SpeciesViewModel
-
-    init(isPresented: Bool = false, presentPopupFish: Bool = false, presentPopupClock: Bool = false, mapStyle: MKMapType? = nil) {
-        self._isPresented = State(initialValue: isPresented)
-        self._presentPopupFish = State(initialValue: presentPopupFish)
-        self._presentPopupClock = State(initialValue: presentPopupClock)
-        self._mapStyle = State(initialValue: mapStyle ?? .mutedStandard)
-    }
-    
-    var body: some View {
-        
-        ZStack{
-            MapViewControllerRepresentable(viewModel: viewModel, mapStyle: mapStyle)
-                .ignoresSafeArea(.all)
-            
-            HStack() {
-                
-                VStack{
-                    
-                    MapBouton(systemIcon: "gear") {
-                        isPresented.toggle()
-                    }
-                    .padding(.leading, 7)
-                    .padding(.top, 3)
-                    Spacer()
-                }
-                Spacer()
-                VStack{
-                    
-                    // Menu choix fond de carte
-                    Menu {
-                        Button("Standard atténué") { mapStyle = .mutedStandard }
-                        Button("Standard") { mapStyle = .standard }
-                        Button("Satellite") { mapStyle = .satellite }
-                        Button("Hybrid") { mapStyle = .hybrid }
-                            .presentationCompactAdaptation(.popover)
-                            .scrollContentBackground(.hidden)
-                            .presentationBackground(.thinMaterial)
-                    } label: {
-                        MapBouton(systemIcon: "square.3.layers.3d") { }
-                    }
-                    
-                    
-                    // Bouton reglages du cadre des timestamps a afficher
-                    MapBouton(systemIcon: "clock.arrow.circlepath"){ self.presentPopupClock = true }
-                        .popover(isPresented: $presentPopupClock) {
-                            PopoverView(popoverType: .clock)
-                                .frame(width: 300, height: 100)
-                                .presentationCompactAdaptation(.popover)
-                                .scrollContentBackground(.hidden)
-                                .presentationBackground(.thinMaterial)
-                        }
-                    
-                    
-                    // Bouton choix des animaux a afficher
-                    MapBouton(systemIcon: "fish"){ self.presentPopupFish = true }
-                        .popover(isPresented: $presentPopupFish) {
-                            PopoverView(popoverType: .fish)
-                                .presentationCompactAdaptation(.popover)
-                                .scrollContentBackground(.hidden)
-                                .presentationBackground(.thinMaterial)
-                        }
-                    
-                    
-                    Spacer()
-                }
-                .padding(.top, 55)
-            }
-        }
-        
-        // Appel du sheet de préferences/reglages généraux
-        .sheet(isPresented: $isPresented) {
-            PreferencesView()
-                .presentationBackground(.ultraThinMaterial)
-        }
-    }
-}
+//    init(isPresented: Bool = false, presentPopupFish: Bool = false, presentPopupClock: Bool = false, mapStyle: MKMapType? = nil) {
+//        self._isPresented = State(initialValue: isPresented)
+//        self._presentPopupFish = State(initialValue: presentPopupFish)
+//        self._presentPopupClock = State(initialValue: presentPopupClock)
+//        self._mapStyle = State(initialValue: mapStyle ?? .mutedStandard)
+//    }
+//    
+//    var body: some View {
+//        
+//        ZStack{
+//            MapViewControllerRepresentable(viewModel: viewModel, mapStyle: mapStyle)
+//                .ignoresSafeArea(.all)
+//            
+//            HStack() {
+//                
+//                VStack{
+//                    
+//                    MapButton(systemIcon: "gear") {
+//                        isPresented.toggle()
+//                    }
+//                    .padding(.leading, 7)
+//                    .padding(.top, 3)
+//                    Spacer()
+//                }
+//                Spacer()
+//                VStack{
+//                    
+//                    // Menu choix fond de carte
+//                    Menu {
+//                        Button("Standard atténué") { mapStyle = .mutedStandard }
+//                        Button("Standard") { mapStyle = .standard }
+//                        Button("Satellite") { mapStyle = .satellite }
+//                        Button("Hybrid") { mapStyle = .hybrid }
+//                            .presentationCompactAdaptation(.popover)
+//                            .scrollContentBackground(.hidden)
+//                            .presentationBackground(.thinMaterial)
+//                    } label: {
+//                        MapButton(systemIcon: "square.3.layers.3d") { }
+//                    }
+//                    
+//                    
+//                    // Bouton reglages du cadre des timestamps a afficher
+//                    MapButton(systemIcon: "clock.arrow.circlepath"){ self.presentPopupClock = true }
+//                        .popover(isPresented: $presentPopupClock) {
+//                            PopoverView(popoverType: .clock)
+//                                .frame(width: 300, height: 100)
+//                                .presentationCompactAdaptation(.popover)
+//                                .scrollContentBackground(.hidden)
+//                                .presentationBackground(.thinMaterial)
+//                        }
+//                    
+//                    
+//                    // Bouton choix des animaux a afficher
+//                    MapButton(systemIcon: "fish"){ self.presentPopupFish = true }
+//                        .popover(isPresented: $presentPopupFish) {
+//                            PopoverView(popoverType: .fish)
+//                                .presentationCompactAdaptation(.popover)
+//                                .scrollContentBackground(.hidden)
+//                                .presentationBackground(.thinMaterial)
+//                        }
+//                    
+//                    
+//                    Spacer()
+//                }
+//                .padding(.top, 55)
+//            }
+//        }
+//        
+//        // Appel du sheet de préferences/reglages généraux
+//        .sheet(isPresented: $isPresented) {
+//            PreferencesView()
+//                .presentationBackground(.ultraThinMaterial)
+//        }
+//    }
+//}

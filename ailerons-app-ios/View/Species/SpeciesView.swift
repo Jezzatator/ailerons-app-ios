@@ -7,17 +7,17 @@
 
 import SwiftUI
 
-struct SpeciesView: View {
-    @EnvironmentObject var speciesViewModel: SpeciesViewModel
+//struct SpeciesView: View {
+//    @EnvironmentObject var speciesViewModel: SpeciesViewModel
+//
+//    var body: some View {
+//        NavigationStack {
+//            ListView(individuals: speciesViewModel.individuals, listType: .all)
+//        }
+//    }
+//}
 
-    var body: some View {
-        NavigationStack {
-            ListView(individuals: speciesViewModel.individuals, listType: .all)
-        }
-    }
-}
 
-
-#Preview {
-    SpeciesView()
-}
+//#Preview {
+//    SpeciesView()
+//}

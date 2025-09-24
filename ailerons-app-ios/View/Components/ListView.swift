@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ListView: View {
     
-    var individuals: SupaIndiv
+    var individuals: [SupaIndivElement]
     var listType: ListType
     
     var body: some View {

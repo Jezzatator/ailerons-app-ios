@@ -33,7 +33,7 @@ struct MapViewControllerRepresentable: UIViewRepresentable {
         uiView.removeAnnotations(uiView.annotations)
         uiView.removeOverlays(uiView.overlays)
         
-        let annotations = viewModel.extractGeoJSONFeatures()
+        let annotations = viewModel.extractGeoJSONFeatures(from: viewModel.individuals)
         uiView.addAnnotations(annotations)
         
         addPolylines(to: uiView, from: viewModel.individuals)
@@ -43,7 +43,7 @@ struct MapViewControllerRepresentable: UIViewRepresentable {
         }
     }
 
-    private func addPolylines(to mapView: MKMapView, from individuals: SupaIndiv) {
+    private func addPolylines(to mapView: MKMapView, from individuals: [SupaIndivElement]) {
         for individual in individuals {
             
             guard let featureCollection = individual.featureCollection else {return}

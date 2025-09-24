@@ -57,7 +57,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 
     private func updateMapWithGeoJSON() {
         print("Updating map with GeoJSON data...")
-        let annotations = viewModel.extractGeoJSONFeatures()
+        let annotations = viewModel.extractGeoJSONFeatures(from: viewModel.individuals)
         print("Annotations count before adding: \(annotations.count)")
         mapView.removeAnnotations(mapView.annotations)
         mapView.addAnnotations(annotations)
@@ -71,10 +71,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             let latitudes = coordinates.map { $0.latitude }
             let longitudes = coordinates.map { $0.longitude }
 
-            let minLat = latitudes.min() ?? 0
-            let maxLat = latitudes.max() ?? 0
-            let minLon = longitudes.min() ?? 0
-            let maxLon = longitudes.max() ?? 0
+            let minLat = latitudes.min() ?? 0.0
+            let maxLat = latitudes.max() ?? 0.0
+            let minLon = longitudes.min() ?? 0.0
+            let maxLon = longitudes.max() ?? 0.0
 
             region.center.latitude = (minLat + maxLat) / 2
             region.center.longitude = (minLon + maxLon) / 2
@@ -85,7 +85,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
     }
 
-    private func addPolylines(to mapView: MKMapView, from individuals: SupaIndiv) {
+    private func addPolylines(to mapView: MKMapView, from individuals: [SupaIndivElement]) {
         for individual in individuals {
             let coordinates = individual.featureCollection?.features.compactMap { feature -> CLLocationCoordinate2D? in
                 guard feature.geometry.coordinates.count == 2 else {

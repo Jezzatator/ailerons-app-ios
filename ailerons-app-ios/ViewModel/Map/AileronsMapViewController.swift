@@ -8,7 +8,7 @@
 import Foundation
 import MapKit
 
-class AileronsMapViewController: UIViewController, AileronsMap {
+class AileronsMapViewController: UIViewController, @preconcurrency AileronsMap {
     var displayedOverlays: [MKOverlay] = []
     var displayedAnnotations: [MKAnnotation] = []
     var mapView = MKMapView()
