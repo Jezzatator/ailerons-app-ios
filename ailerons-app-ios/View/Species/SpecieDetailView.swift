@@ -107,8 +107,10 @@ struct SpecieDetailView: View {
                     .frame(maxWidth: UIScreen.main.bounds.width - 20, alignment: .bottomTrailing)
                 
                 Spacer()
-            }.padding(.horizontal)
+            }
+            .padding(.horizontal)
         }
+        .padding(.horizontal)
         .navigationTitle("Fiche d'identité")
         .navigationBarTitleDisplayMode(.inline)
     }
